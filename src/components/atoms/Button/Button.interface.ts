@@ -1,4 +1,4 @@
-import { ButtonState } from 'interfaces';
+import { ButtonState } from '../../../interfaces';
 
 export interface ButtonProps {
 	state?: ButtonState,

@@ -5,7 +5,7 @@ import { font, palette } from 'styled-theme';
 import { switchProp, ifProp } from 'styled-tools';
 import { ButtonProps } from './Button.interface';
 
-import * as Spinner from '../../../media/btn_spinner.gif';
+const Spinner = require('../../../media/btn_spinner.gif');
 
 const CustomButton = ({ state, onClick,...rest } :ButtonProps) =>  <a onClick={state === "disabled" ? () => {}: onClick} {...rest}/>;
 
