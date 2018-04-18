@@ -1,0 +1,179 @@
+{
+	"defaultSeverity": "error",
+	"extends": [],
+	"rules": {
+		"indent": [
+			true,
+			"tabs",
+			2
+		],
+		"linebreak-style": [
+			true,
+			"LF"
+		],
+		"quotes": [
+			"double"
+		],
+		"semi": [
+			"always"
+		],
+		"trailing-comma": [
+			false
+		],
+		"no-trailing-spaces": [
+			{
+				"ignoreComments": false,
+				"skipBlankLines": false
+			}
+		],
+		"key-spacing": [
+			{
+				"beforeColon": false,
+				"afterColon": true,
+				"mode": "strict"
+			}
+		],
+		"comma-spacing": [
+			{
+				"before": false,
+				"after": true 
+			}
+		],
+		"interface-name": [
+			true,
+			"never-prefix"
+		],
+		"block-spacing": [
+			"always"
+		],
+		"object-curly-spacing": [
+			"always"
+		],
+		"object-literal-key-quotes": [
+			false
+		],
+		"object-literal-sort-keys": [
+			false
+		],
+		"block-scoped-var": [
+			"warning"
+		],
+		"dot-location": [
+			"property"
+		],
+		"quotemark": [
+			"single"
+		],
+		"no-floating-decimal": [
+			"warning"
+		],
+		"no-extra-semi": [
+			"warning"
+		],
+		"getter-return": [
+			{
+				"allowImplicit": true
+			}
+		],
+		"no-await-in-loop": [
+			"warning"
+		],
+		"no-submodule-imports": [
+			false
+		],
+		"no-template-curly-in-string": [
+			"warning"
+		],
+		"curly": [
+			true, "ignore-same-line"
+		],
+		"no-alert": [
+			"warn"
+		],
+		"no-multi-spaces": [
+			"warning"
+		],
+		"no-return-await": [
+			"warning"
+		],
+		"no-self-compare": [
+			"warning"
+		],
+		"brace-style": [
+			"stroustrup",
+			{
+				"allowSingleLine": true
+			}
+		],
+		"max-depth": [
+			4
+		],
+		"max-params": [
+			{
+				"max": 4
+			}
+		],
+		"new-parens": [
+			true
+		],
+		"no-console": false,
+		"member-ordering": false,
+		"max-len": [
+			{
+				"code": 160,
+				"ignoreTemplateLiterals": true
+			}
+		],
+		"no-angle-bracket-type-assertion": [
+			false
+		],
+		"no-var-requires": [
+			false
+		],
+		"space-before-blocks": [
+			"always"
+		],
+		"space-before-function-paren": [
+			true,
+			"never"
+		],
+		"space-infix-ops": [
+			"warning"
+		],
+		"space-unary-ops": [
+			"warning"
+		],
+		"switch-colon-spacing": [
+			"warning"
+		],
+		"arrow-body-style": [
+			"as-needed"
+		],
+		"arrow-spacing": [
+			{
+				"before": true,
+				"after": true
+			}
+		],
+		"no-var": [
+			"warning"
+		],
+		"no-unused-expression": false,
+		"ordered-imports": false,
+		"prefer-arrow-callback": [
+			"warning"
+		],
+		"prefer-const": [
+			true
+		],
+		"jsx-no-multiline-js": [
+			false
+		],
+		"jsx-no-lambda": false,
+		"jsx-alignment": false,
+		"jsx-boolean-value": false,
+		"no-shadowed-variable":false,
+		"align":false
+	},
+	"rulesDirectory": []
+}
