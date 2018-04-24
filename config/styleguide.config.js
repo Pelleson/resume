@@ -3,11 +3,7 @@ const path = require("path")
 
 module.exports = {
 		ignore: [
-			'**/*.test.{js,jsx,ts,tsx}',
-			'**/components/molecules/Selectables/Wrapper/**',
-			'**/components/content/SettingsContent/Layout/*.tsx',
-			'**/components/organisms/MassRegistration/Header/*.tsx',
-			'**/components/modal/ThemePreviewModal/*.tsx'
+			'**/*.test.{js,jsx,ts,tsx}'
 		],
 		webpackConfig: config,
 		serverPort: 8000,
