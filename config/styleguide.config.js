@@ -1,11 +1,15 @@
-const config = require('./webpack.config.js');
+const config = require('./webpack.dev');
+const path = require("path")
 
 module.exports = {
-		propsParser: require('react-docgen-typescript').parse,
-		webpackConfig: require('react-scripts-ts/config/webpack.config.dev.js'),
 		ignore: [
-			'**/*.test.{js,jsx,ts,tsx}'
+			'**/*.test.{js,jsx,ts,tsx}',
+			'**/components/molecules/Selectables/Wrapper/**',
+			'**/components/content/SettingsContent/Layout/*.tsx',
+			'**/components/organisms/MassRegistration/Header/*.tsx',
+			'**/components/modal/ThemePreviewModal/*.tsx'
 		],
+		webpackConfig: config,
 		serverPort: 8000,
 		sections: [
 			{
@@ -23,6 +27,23 @@ module.exports = {
 			{
 				name: "Pages",
 				components: '../src/components/pages/**/[A-z]*.tsx'
+			},
+			{
+				name: "Modals",
+				components: '../src/components/modal/**/[A-z]*.tsx'
+			},
+			{
+				name: "Content",
+				sections: [
+					{
+						name: "SettingsPage",
+						components: '../src/components/content/SettingsPage/**/[A-z]*.tsx'
+					},
+					{
+						name: "CoordinatorModal",
+						components: '../src/components/content/CoordinatorModal/**/[A-z]*.tsx'
+					}
+				]
 			}
 		]
 

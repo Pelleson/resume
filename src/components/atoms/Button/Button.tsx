@@ -5,8 +5,7 @@ import { font, palette } from 'styled-theme';
 import { switchProp, ifProp } from 'styled-tools';
 import { ButtonProps } from './Button.interface';
 
-//const Spinner = require('../../../media/btn_spinner.gif');
-//const logo = require('./logo.svg');
+const Spinner = require('../../../media/btn_spinner.gif');
 
 const CustomButton = ({ state, onClick,...rest } :ButtonProps) =>  <a onClick={state === "disabled" ? () => {}: onClick} {...rest}/>;
 
@@ -27,6 +26,7 @@ const Button = styled(CustomButton)`
 	font-size: 12px;
 
 	${ifProp({ state: 'loading' }, `
+		background-image: url(${Spinner});
 		background-size: 30%;
 		background-repeat: no-repeat;
 		background-position: center;

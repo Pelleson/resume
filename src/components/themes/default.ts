@@ -5,24 +5,13 @@ const theme = <Themes> {}
 
 theme.palette = {
 	primary: ['#4C709B', '#6898C7'],
-	primaryText: ['white'],
+	primaryText: ['#ffffff'],
 	primaryBorder: ['#3B5778'],
 	secondary: ['#c2185b'],
 	danger: ['#d32f2f'],
 	alert: ['#ffa000'],
 	success: ['#388e3c'],
-	white: ['#fff'],
-	modalbackground: ['#f7f9fc'],
-	grayscale: [
-		'#212121',
-		'#414141',
-		'#616161',
-		'#9e9e9e',
-		'#bdbdbd',
-		'#e0e0e0',
-		'#eeeeee',
-		'#ffffff',
-	],
+	white: ['#fff']
 }
 
 theme.reversePalette = reversePalette(theme.palette);
@@ -42,4 +31,4 @@ theme.sizes = {
 	modalFooterSize: '30px'
 }
 
-export default theme
+export default theme;
