@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 import { font, size, palette } from 'styled-theme';
-//import { prop } from 'styled-tools';
-
 
 const Header = styled.span`
 	margin-bottom: 2.33em;

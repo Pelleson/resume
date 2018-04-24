@@ -1,35 +1,56 @@
 {
 	"compilerOptions": {
-		"outDir": "build/dist",
-		"module": "esnext",
-		"target": "es5",
-		"lib": ["es6", "dom"],
-		"sourceMap": true,
+		"target": "es6",
 		"allowJs": true,
-		"jsx": "react",
-		"moduleResolution": "node",
-		"rootDir": "src",
-		"forceConsistentCasingInFileNames": true,
-		"noImplicitReturns": true,
-		"noImplicitThis": true,
+		"module": "commonjs",
 		"noImplicitAny": false,
-		"strictNullChecks": true,
-		"suppressImplicitAnyIndexErrors": true,
-		"noUnusedLocals": true,
+		"removeComments": true,
+		"experimentalDecorators": true,
+		"sourceMap": true,
+		"baseUrl": ".",
 		"paths": {
+			"components/*": [
+				"src/components/*"
+			],
+			"content/*": [
+				"src/components/content/*"
+			],
+			"containers": [
+				"src/containers/"
+			],
+			"stores": [
+				"src/stores/"
+			],
+			"models": [
+				"src/models/"
+			],
+			"utils": [
+				"src/utils/"
+			],
 			"interfaces": [
 				"src/interfaces/"
+			],
+			"validation": [
+				"src/utils/validation.ts"
 			]
-		}
+		},
+		"jsx": "react",
+		"outDir": "dist",
+		"lib": [
+			"dom",
+			"es2017",
+			"esnext.asynciterable"
+		],
+		"types": [
+			"node",
+			"jest"
+		]
 	},
-	"exclude": [
-		"node_modules",
-		"build",
-		"scripts",
-		"acceptance-tests",
-		"webpack",
-		"jest",
-		"src/setupTests.ts"
+	"include": [
+		"src",
+		"types"
 	],
-	
+	"exclude": [
+		"node_modules"
+	]
 }

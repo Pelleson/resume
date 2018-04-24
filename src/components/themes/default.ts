@@ -42,5 +42,4 @@ theme.sizes = {
 	modalFooterSize: '30px'
 }
 
-
 export default theme

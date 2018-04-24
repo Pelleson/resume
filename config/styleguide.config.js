@@ -1,9 +1,12 @@
+const config = require('./webpack.config.js');
 
 module.exports = {
+		propsParser: require('react-docgen-typescript').parse,
+		webpackConfig: require('react-scripts-ts/config/webpack.config.dev.js'),
 		ignore: [
 			'**/*.test.{js,jsx,ts,tsx}'
 		],
-
+		serverPort: 8000,
 		sections: [
 			{
 				name: "Atoms",
