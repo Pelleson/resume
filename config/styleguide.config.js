@@ -31,20 +31,6 @@ module.exports = {
 			{
 				name: "Modals",
 				components: '../src/components/modal/**/[A-z]*.tsx'
-			},
-			{
-				name: "Content",
-				sections: [
-					{
-						name: "SettingsPage",
-						components: '../src/components/content/SettingsPage/**/[A-z]*.tsx'
-					},
-					{
-						name: "CoordinatorModal",
-						components: '../src/components/content/CoordinatorModal/**/[A-z]*.tsx'
-					}
-				]
 			}
 		]
-
 	};
