@@ -25,7 +25,7 @@ theme.fonts = {
 theme.sizes = {
 	fontSize: '10pt',
 	secondaryFontSize: '8pt',
-	headerFontSize: '2em',
+	headerFontSize: '5em',
 	defaultPadding: '3px',
 	modalHeaderSize: '30px',
 	modalFooterSize: '30px'

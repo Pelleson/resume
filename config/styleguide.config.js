@@ -6,6 +6,9 @@ module.exports = {
 			'**/*.test.{js,jsx,ts,tsx}'
 		],
 		webpackConfig: config,
+		styleguideComponents: {
+			Wrapper: path.join(__dirname, "../src/styleguide/Wrapper")
+		},
 		serverPort: 8000,
 		sections: [
 			{
