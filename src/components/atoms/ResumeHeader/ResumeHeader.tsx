@@ -1,14 +1,22 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { font, size, palette } from 'styled-theme';
-import { ResumeHeaderProps } from './ResumeHeader.interface';
+import { HeaderOne, HeaderThree } from 'components/atoms';
 
+const ResumeDiv = styled.div `
+	display: flex;
+	align-items: center;
+`;
 
-const ResumeHeader = ({ className }: ResumeHeaderProps) => {
+const ResumeHeader = () => {
 	return (
-		<div className={className}>
-			
-		</div>
+		<ResumeDiv>
+			<HeaderOne>
+				Pelle Alstermo
+			</HeaderOne>
+			<HeaderThree>
+				System-Developer
+			</HeaderThree>
+		</ResumeDiv>
 	);
 };
 

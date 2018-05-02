@@ -1,7 +1,9 @@
-import Header from './Header/Header';
+import HeaderOne from './HeaderOne/HeaderOne';
+import HeaderThree from './HeaderThree/HeaderThree';
 import Button from './Button/Button';
 
 export {
-	Header,
+	HeaderOne,
+	HeaderThree,
 	Button
 }
