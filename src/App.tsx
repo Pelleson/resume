@@ -2,7 +2,11 @@ import * as React from 'react';
 import './App.css';
 import axios from "axios";
 import  ResumeHeader from "./components/molecules/ResumeHeader/ResumeHeader";
+import  HobbyItem from "./components/molecules/HobbyItem/HobbyItem";
+
 const logo = require('./logo.svg');
+
+const dancing = require('./media/dancing.png');
 
 class App extends React.Component {
 	render() {
@@ -22,6 +26,7 @@ class App extends React.Component {
 					<h1 className="App-title">Welcome to React</h1>
 				</header>
 				<ResumeHeader></ResumeHeader>
+				<HobbyItem text="Dancing" imageSrc={dancing}></HobbyItem>
 			</div>
 		);
 	}
