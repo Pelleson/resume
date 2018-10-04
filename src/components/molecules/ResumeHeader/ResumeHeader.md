@@ -1,5 +1,0 @@
-
-
-```js
-	<ResumeHeader></ResumeHeader>
-```
