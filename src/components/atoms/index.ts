@@ -1,13 +1,9 @@
 import { Link } from './Link';
-import { Span } from './Span';
-import { Image } from './Image';
-import { HeaderOne } from './HeaderOne';
-import { HeaderThree } from './HeaderThree';
+import { Label } from "./Label";
+import { Textarea } from "./Textarea";
 
 export {
 	Link,
-	Span,
-	Image,
-	HeaderOne,
-	HeaderThree,
+	Label,
+	Textarea
 }

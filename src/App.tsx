@@ -1,35 +1,25 @@
 import * as React from 'react';
 import './App.css';
 import axios from "axios";
-import  ResumeHeader from "./components/molecules/ResumeHeader/ResumeHeader";
-import  HobbyItem from "./components/molecules/HobbyItem/HobbyItem";
+import  {Textarea, Label} from "./components/atoms";
+import { injectIntl, InjectedIntlProps } from 'react-intl';
 
 const logo = require('./logo.svg');
 
-const dancing = require('./media/dancing.png');
-
-class App extends React.Component {
+class App extends React.Component<InjectedIntlProps> {
 	render() {
-		/* tslint:disable */
-		axios.get('https://api.github.com/zen')
-			.then(function (response) {
-				console.log(response.data);
-			})
-			.catch(function (error) {
-				console.log(error);
-			});
-		/* tslint:enable */
+		const { intl } = this.props;
 		return (
 			<div className="App">
 				<header className="App-header">
 					<img src={logo} className="App-logo" alt="logo" />
 					<h1 className="App-title">Welcome to React</h1>
 				</header>
-				<ResumeHeader></ResumeHeader>
-				<HobbyItem text="Dancing" imageSrc={dancing}></HobbyItem>
+				<Label required>{intl.formatMessage({ id: "common.label" })}</Label>
+				<Textarea rounded></Textarea>
 			</div>
 		);
 	}
 }
 
-export default App;
+export default injectIntl(App);

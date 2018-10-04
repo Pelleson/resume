@@ -1,11 +1,19 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 import './index.css';
+import { IntlProvider, addLocaleData } from 'react-intl';
+
+addLocaleData(require('react-intl/locale-data/sv'));
+addLocaleData(require('react-intl/locale-data/en'));
+
+const locale: string = "sv-SE";
+const localePrefix = locale.split("-")[0];
+const messages = require(`./translations/${localePrefix}`).default;
 
 ReactDOM.render(
-	<App />,
+	<IntlProvider messages={messages} locale={localePrefix} >
+	<App />
+	</IntlProvider>,
 	document.getElementById('root') as HTMLElement
 );
-registerServiceWorker();
