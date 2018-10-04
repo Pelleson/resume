@@ -16,26 +16,14 @@
 			"components/*": [
 				"src/components/*"
 			],
-			"content/*": [
-				"src/components/content/*"
-			],
-			"containers": [
-				"src/containers/"
-			],
 			"stores": [
 				"src/stores/"
 			],
 			"models": [
 				"src/models/"
 			],
-			"utils": [
-				"src/utils/"
-			],
 			"interfaces": [
 				"src/interfaces/"
-			],
-			"validation": [
-				"src/utils/validation.ts"
 			]
 		},
 		"jsx": "react",
