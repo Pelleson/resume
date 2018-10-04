@@ -14,28 +14,37 @@
 		"baseUrl": ".",
 		"paths": {
 			"components/*": [
-				"src/components/*"
+				"../src/components/*"
 			],
 			"content/*": [
-				"src/components/content/*"
+				"../src/components/content/*"
 			],
 			"containers": [
-				"src/containers/"
+				"../src/containers/"
 			],
 			"stores": [
-				"src/stores/"
+				"../src/stores/"
 			],
 			"models": [
-				"src/models/"
+				"../src/models/"
 			],
 			"utils": [
-				"src/utils/"
+				"../src/utils/"
 			],
 			"interfaces": [
-				"src/interfaces/"
+				"../src/interfaces/"
 			],
 			"validation": [
-				"src/utils/validation.ts"
+				"../src/utils/validation.ts"
+			],
+			"hoc/*": [
+				"../src/hoc/*"
+			],
+			"controllers": [
+				"../src/controllers/"
+			],
+			"services": [
+				"../src/services/"
 			]
 		},
 		"jsx": "react",
@@ -47,6 +56,7 @@
 		],
 		"types": [
 			"node",
+			"webpack-env",
 			"jest"
 		]
 	},

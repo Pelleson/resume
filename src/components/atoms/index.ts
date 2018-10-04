@@ -1,13 +1,13 @@
-import Link from './Link/Link';
-import Span from './Span/Span';
-import Image from './Image/Image';
-import HeaderOne from './HeaderOne/HeaderOne';
-import HeaderThree from './HeaderThree/HeaderThree';
+import { Link } from './Link';
+import { Span } from './Span';
+import { Image } from './Image';
+import { HeaderOne } from './HeaderOne';
+import { HeaderThree } from './HeaderThree';
 
 export {
 	Link,
 	Span,
 	Image,
 	HeaderOne,
-	HeaderThree
+	HeaderThree,
 }
