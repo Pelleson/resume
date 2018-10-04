@@ -8,10 +8,10 @@ export interface IPerson {
 }
 
 const Default = <IPerson> {
-	city: "",
-	email: "",
-	lastname: "",
-	firstname: ""
+	city: "Stockholm",
+	email: "pelle.alstermo@tofindout.se",
+	lastname: "Alstermo",
+	firstname: "Pelle"
 };
 
 export class Person implements IPerson {

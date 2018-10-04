@@ -8,8 +8,8 @@ export class PersonStore {
 	@observable public person: Person;
 	@observable public viewModel: ViewModel<Person>;
 
-	constructor(model: Person) {
-		this.person = model;
+	constructor() {
+		this.person = new Person();
 		this.viewModel = createViewModel(this.person);
 	};
 

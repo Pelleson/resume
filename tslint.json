@@ -8,7 +8,7 @@
 	"rules": {
 		"curly": true,
 		"no-empty-interface": true,
-		"no-console": true,
+		"no-console": false,
 		"no-construct": true,
 		"no-debugger": true,
 		"no-duplicate-super": true,
