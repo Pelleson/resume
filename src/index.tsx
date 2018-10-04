@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import App from './App';
-import './index.css';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import * as moment from 'moment';
 
