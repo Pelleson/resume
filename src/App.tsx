@@ -1,5 +1,6 @@
 import * as React from 'react';
-import  {Textarea, Label} from "./components/atoms";
+import  {Textarea, Label, Input } from "./components/atoms";
+import { LabeledChild } from "./components/molecules";
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import { PersonStore } from "stores";
 import styled from 'styled-components';
@@ -19,7 +20,16 @@ class App extends React.Component<IApp & InjectedIntlProps> {
 				<Label required>{intl.formatMessage({ id: "common.label" })}</Label>
 				<Textarea
 				rounded
-				value={store.viewModel.fullname} onChange={e => store.onChange("email", e.target.value)}/>
+				value={store.viewModel.fullname}/>
+
+				<Input value={store.viewModel.firstname} onChange={e => store.onChange("firstname", e.target.value)} />
+
+				<Input value={store.viewModel.lastname} onChange={e => store.onChange("lastname", e.target.value)} />
+
+				<LabeledChild Text="Label">
+					<Input value={store.viewModel.email} onChange={e => store.onChange("email", e.target.value)} />
+				</LabeledChild>
+
 			</div>
 		);
 	}

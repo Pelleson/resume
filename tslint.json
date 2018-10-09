@@ -21,7 +21,6 @@
 		"no-return-await": true,
 		"no-sparse-arrays": true,
 		"trailing-comma": false,
-		"indent": [true, "tabs", 2],
 		"max-classes-per-file": [true, 1],
 		"no-duplicate-imports": true,
 		"align": [true, "parameters", "statements"],

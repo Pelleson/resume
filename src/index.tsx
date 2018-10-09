@@ -4,7 +4,6 @@ import App from './App';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import * as moment from 'moment';
 import { PersonStore } from "stores";
-import { Person } from 'models';
 
 addLocaleData(require('react-intl/locale-data/sv'));
 addLocaleData(require('react-intl/locale-data/en'));

@@ -20,14 +20,10 @@ const DangerText = styled(CustomLabel)`
 
 const Indicator = styled(CustomLabel) `
 	color: black;
-
-	&:hover {
-		color: black;
-	}
 `;
 
 const PrimaryText = styled(CustomLabel) `
-	color: black;
+	color: white;
 `;
 
 const Wrapper = styled.div`
@@ -42,8 +38,8 @@ const Wrapper = styled.div`
 `;
 
 const Popup = styled.div`
-	left: 50%;
-	top: -6px;
+	left: 90px;
+	top: 30px;
 	z-index: 2;
 	padding: 5px;
 	display: none;
@@ -51,8 +47,7 @@ const Popup = styled.div`
 	position: absolute;
 	min-width: 150px;
 	border-radius: 5px;
-	color: black;
-	background: white;
+	background: grey;
 	transform: translateX(-50%) translateY(-100%);
 		&:before {
 		left: 48%;

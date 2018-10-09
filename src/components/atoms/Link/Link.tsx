@@ -2,7 +2,6 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 import { ifProp } from 'styled-tools';
-import { font, palette } from 'styled-theme';
 
 interface LinkProps {
 	bold?: boolean,
@@ -20,9 +19,8 @@ const Link = styled(CustomLink) `
 	&:hover {
 		text-decoration: underline;
 	}
-	font-family: ${font('primary')};
 	font-size: 12px;
-	color: ${palette('primary',0)};
+	color: black;
 	font-weight: ${ifProp('bold', 'bold', 'normal')};
 `;
 
