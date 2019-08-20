@@ -1,21 +1,24 @@
 import * as React from 'react';
-import { injectIntl, InjectedIntlProps } from 'react-intl';
 import { Label } from "../../atoms";
-export interface ILabeledChild {
-    Text: string;
-    children: JSX.Element;
+import { ILabel } from 'components/atoms/Label';
+import styled from 'styled-components';
+
+export interface ILabeledChild{
+	children?: any;
+	labelFirst?: boolean;
+	label?: string;
 };
 
-class LabeledChild extends React.Component<ILabeledChild & InjectedIntlProps> {
+const CustomDiv = styled.div<ILabeledChild>`
+	display: flex;
+	flex-direction: ${p => p.labelFirst ? 'row' : 'column'};
+`;
 
-	render() {
-		return (
-			<React.Fragment>
-                <Label required>{this.props.Text}</Label>
-                {this.props.children}
-            </React.Fragment>
-		);
-	}
-}
+const LabeledChild = ({children, label, labelFirst}: ILabeledChild) => (
+	<CustomDiv labelFirst={labelFirst}>
+		<Label label={label}></Label>
+		{children}
+	</CustomDiv>
+);
 
-export default injectIntl(LabeledChild);
+export default LabeledChild;

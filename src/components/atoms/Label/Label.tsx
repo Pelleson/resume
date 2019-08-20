@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 
 export interface ILabel {
-	children?: any,
+	label: string,
 	tooltip?: string,
 	required?: boolean,
 	className?: string
@@ -18,11 +18,11 @@ const DangerText = styled(CustomLabel)`
 	color: red;
 `;
 
-const Indicator = styled(CustomLabel) `
+const Indicator = styled(CustomLabel)`
 	color: black;
 `;
 
-const PrimaryText = styled(CustomLabel) `
+const PrimaryText = styled(CustomLabel)`
 	color: white;
 `;
 
@@ -60,24 +60,21 @@ const Popup = styled.div`
 	}
 `;
 
-const Label = ({ children, tooltip, className, intl, required = false }: ILabel & InjectedIntlProps) => {
-	const { formatMessage } = intl;
-	return (
-		<div className={className}>
-			<CustomLabel>{children}</CustomLabel>
-			{required && <DangerText>*</DangerText>}
-			{
-				(tooltip || required) &&
-				<Wrapper>
-					<Indicator>&nbsp;?</Indicator>
-					<Popup>
-						{ tooltip && <PrimaryText> {tooltip} <br/> </PrimaryText> }
-						{ required && <PrimaryText> <DangerText> * </DangerText> {formatMessage({ id: "common.requiredfield" })} </PrimaryText> }
-					</Popup>
-				</Wrapper>
-			}
-		</div>
-	);
-};
+const Label = ({ label, tooltip, className, intl, required = false }: ILabel & InjectedIntlProps) => (
+	<div className={className}>
+		<CustomLabel>{label}</CustomLabel>
+		{required && <DangerText>*</DangerText>}
+		{
+			(tooltip || required) &&
+			<Wrapper>
+				<Indicator>&nbsp;?</Indicator>
+				<Popup>
+					{tooltip && <PrimaryText> {tooltip} <br /> </PrimaryText>}
+					{required && <PrimaryText> <DangerText> * </DangerText> {intl.formatMessage({ id: "common.requiredfield" })} </PrimaryText>}
+				</Popup>
+			</Wrapper>
+		}
+	</div>
+);
 
 export default injectIntl(Label);

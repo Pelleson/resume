@@ -5,7 +5,13 @@ import { Label, Link, Textarea, Input } from 'components/atoms';
 const rootName = 'Atomic Design/Atoms';
 
 storiesOf(rootName, module)
-	.add('Label', () => <Label required tooltip="tooltip">Hejsan</Label>)
+	.add('Label', () => (
+		<div>
+			<Label label={"Label"}></Label>
+			<Label label={"Label required"} required></Label>
+			<Label label={"Label tooltip"}tooltip="tooltip"></Label>
+		</div>
+	))
 
 storiesOf(rootName, module)
 	.add('Link', () => <Link onClick={() => alert('onclick link')}>Link</Link>)

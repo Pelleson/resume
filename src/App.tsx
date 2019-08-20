@@ -17,7 +17,7 @@ class App extends React.Component<IApp & InjectedIntlProps> {
 		const { store, intl } = this.props;
 		return (
 			<div>
-				<Label required>{intl.formatMessage({ id: "common.label" })}</Label>
+				<Label required label={intl.formatMessage({ id: "common.label" })}></Label>
 				<Textarea
 				rounded
 				value={store.viewModel.fullname}/>
@@ -26,7 +26,7 @@ class App extends React.Component<IApp & InjectedIntlProps> {
 
 				<Input value={store.viewModel.lastname} onChange={e => store.onChange("lastname", e.target.value)} />
 
-				<LabeledChild Text="Label">
+				<LabeledChild label="LabeledChild">
 					<Input value={store.viewModel.email} onChange={e => store.onChange("email", e.target.value)} />
 				</LabeledChild>
 
