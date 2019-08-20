@@ -1,14 +1,10 @@
 import 'babel-polyfill';
-import { addDecorator, configure, setAddon } from '@storybook/react';
+import { addDecorator, configure } from '@storybook/react';
 import { setIntlConfig, withIntl } from 'storybook-addon-intl';
 
 import { addLocaleData } from 'react-intl';
 import enLocaleData from 'react-intl/locale-data/en';
 import svLocaleData from 'react-intl/locale-data/sv';
-
-import { withKnobs } from '@storybook/addon-knobs';
-
-addDecorator(withKnobs);
 
 addLocaleData(enLocaleData);
 addLocaleData(svLocaleData);
