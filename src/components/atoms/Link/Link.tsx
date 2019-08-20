@@ -1,28 +1,28 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import { ifProp } from 'styled-tools';
+export interface ILink{
+	children?: string;
+	href?: string;
+	bold?:boolean;
+	className?:string;
+};
 
-interface LinkProps {
-	bold?: boolean,
-	children?: string[] | string,
-	selected?: boolean,
-	href?: string,
-	onClick?(event: React.MouseEvent<HTMLAnchorElement>):void
-}
-
-const CustomLink = ({ bold = false, selected = false, ...rest }: LinkProps) => <a {...rest} />;
-
-const Link = styled(CustomLink) `
-	text-decoration: ${ifProp('selected', 'underline', 'none')};
+const CustomLink = styled.a<ILink>`
+	text-decoration: none;
 	cursor: pointer;
 	&:hover {
 		text-decoration: underline;
 	}
-	font-size: 12px;
+	font-size: 16px;
 	color: black;
-	font-weight: ${ifProp('bold', 'bold', 'normal')};
+	font-weight: ${p => p.bold ? 'bold' : 'normal'};
 `;
 
-/** @component */
-export default Link
+const Link = ({bold, children, href, className}: ILink) => (
+	<CustomLink bold={bold} href={href} className={className}>
+	{children}
+	</CustomLink>
+);
+
+export default Link;

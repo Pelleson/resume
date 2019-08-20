@@ -23,7 +23,7 @@ storiesOf(rootName, module)
 	))
 
 storiesOf(rootName, module)
-	.add('Link', () => <Link onClick={() => alert('onclick link')}>Link</Link>)
+	.add('Link', () => <Link>Link</Link>)
 
 storiesOf(rootName, module)
 	.add('Textarea', () => <Textarea></Textarea>)
