@@ -1,16 +1,16 @@
 import * as React from 'react';
 import { Textarea, Label, Input, Heading } from "./components/atoms";
-import { LabeledChild } from "./components/molecules";
+import { LabeledChild, ContactItem } from "./components/molecules";
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import { PersonStore } from "stores";
 import styled from 'styled-components';
 import { observer } from 'mobx-react';
-
+import { contacts } from "./Collections";
 export interface IApp {
 	store: PersonStore;
 };
 
-const Body = styled.div`
+const Resume = styled.div`
 	background-color: #f7f7f7;
 	position: fixed;
 	top: 0;
@@ -42,12 +42,18 @@ class App extends React.Component<IApp & InjectedIntlProps> {
 	render() {
 		const { store, intl } = this.props;
 		return (
-			<Body>
+			<Resume>
 				<TopHeader>
-					<HeaderBlackish size={1.8}>Pelle Alstermo</HeaderBlackish>
-					<SeaGreenHeader size={1.8}>Webbutvecklare</SeaGreenHeader>
+					<HeaderBlackish size={1.8}>{intl.formatMessage({ id: "common.myName" })}</HeaderBlackish>
+					<SeaGreenHeader size={1.8}>{intl.formatMessage({ id: "common.webDeveloper" })}</SeaGreenHeader>
 				</TopHeader>
 
+				<SeaGreenHeader size={1.8}>{intl.formatMessage({ id: "common.contacts" })}</SeaGreenHeader>
+				<React.Fragment>
+				{contacts.map((item, index) =>
+					<ContactItem key={index} text={item.text} size={item.size} src={item.src} linkText={item.linkText} href={item.href}/>
+				)}
+				</React.Fragment>
 				<div>
 					<Label required label={intl.formatMessage({ id: "common.label" })}></Label>
 					<Textarea
@@ -63,7 +69,7 @@ class App extends React.Component<IApp & InjectedIntlProps> {
 					</LabeledChild>
 
 				</div>
-			</Body>
+			</Resume>
 		);
 	}
 }
