@@ -18,6 +18,8 @@ const Body = styled.div`
 	bottom: 0;
 	right: 0;
 	overflow: auto;
+	background-image: linear-gradient(141deg, #c2c2c2 0%, #c9c9c9 51%, #b5b3b3 75%);
+	opacity: 0.95;
 `;
 
 const TopHeader = styled.div`
