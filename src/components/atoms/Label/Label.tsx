@@ -10,8 +10,7 @@ export interface ILabel {
 };
 
 const CustomLabel = styled.span`
-	font-size: 12px;
-	color: black;
+	font-size: 1.2em;
 `;
 
 const DangerText = styled(CustomLabel)`

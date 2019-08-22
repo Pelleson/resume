@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Label, Link, Textarea, Input, Image, Heading } from 'components/atoms';
+import { HeaderSize } from '../../../src/enums';
 const clothesIcon = require('../../../src/media/clothes.png');
 const dancingIcon = require('../../../src/media/dancing.png');
 
@@ -32,4 +33,4 @@ storiesOf(rootName, module)
 	.add('Input', () => <Input value="Input" onChange={e => console.log(e.target.value)}></Input>)
 
 storiesOf(rootName, module)
-	.add('Heading', () => <Heading size={2}>Heading</Heading>)
+	.add('Heading', () => <Heading size={HeaderSize.H2}>Heading</Heading>)

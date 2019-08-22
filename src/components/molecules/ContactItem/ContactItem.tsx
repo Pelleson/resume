@@ -1,11 +1,10 @@
 import * as React from 'react';
-import { Heading, Image, Link } from "../../atoms";
+import { Image, Link, Label } from "../../atoms";
 import styled from 'styled-components';
 
 export interface IContactItem {
 	src?: string;
-	size: number;
-	text: string;
+	label: string;
 	href?: string;
 	linkText?: string;
 };
@@ -29,11 +28,11 @@ const ColumnDiv = styled.div`
 	flex-direction: column;
 `;
 
-const ContactItem = ({ src, size, text, linkText, href }: IContactItem) => (
+const ContactItem = ({ src, label, linkText, href }: IContactItem) => (
 	<CustomDiv>
 		<ContactIcon src={src} />
 		<ColumnDiv>
-			<Heading size={size}>{text}</Heading>
+			<Label label={label}></Label>
 			<ContactLink href={href}>{linkText}</ContactLink>
 		</ColumnDiv>
 	</CustomDiv>

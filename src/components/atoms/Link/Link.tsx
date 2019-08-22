@@ -14,7 +14,7 @@ const CustomLink = styled.a<ILink>`
 	&:hover {
 		text-decoration: underline;
 	}
-	font-size: 16px;
+	font-size: 1.2em;
 	color: black;
 	font-weight: ${p => p.bold ? 'bold' : 'normal'};
 `;
