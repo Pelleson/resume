@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { Textarea, Label, Input, Heading } from "./components/atoms";
-import { LabeledChild, ContactItem, HobbyItem, IconHeader } from "./components/molecules";
+import { Textarea, Label, Input, Heading, Image } from "./components/atoms";
+import { LabeledChild, ContactItem, HeadedChild } from "./components/molecules";
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import { PersonStore } from "stores";
 import styled from 'styled-components';
 import { observer } from 'mobx-react';
 import { contacts, hobbies } from "./Collections";
-import { HeaderSize } from './enums';
+import { HeaderSize, TextPosition } from './enums';
 const schoolIcon = require('./media/school.png');
 
 export interface IApp {
@@ -24,6 +24,17 @@ const HeaderBlackish = styled(Heading)`
 
 const SeaGreenHeader = styled(Heading)`
 	color: #34b3b7;
+`;
+
+const CustomImage = styled(Image)`
+	height: 40px;
+	width: 40px;
+	margin: 5px;
+`;
+
+const CustomHeadedChild = styled(HeadedChild)`
+	color: #34b3b7;
+	align-items: center;
 `;
 
 @observer
@@ -51,13 +62,17 @@ class App extends React.Component<IApp & InjectedIntlProps> {
 					<SeaGreenHeader size={HeaderSize.H2}>{intl.formatMessage({ id: "common.hobbies" })}</SeaGreenHeader>
 					<FlexRow>
 						{hobbies.map((item, index) =>
-							<HobbyItem key={index} src={item.src} text={item.text} />
+							<CustomHeadedChild key={index} text={item.text} textPosition={TextPosition.Bottom} size={HeaderSize.H4}>
+								<CustomImage src={item.src}></CustomImage>
+							</CustomHeadedChild>
 						)}
 					</FlexRow>
 				</div>
 
 				<div>
-					<IconHeader src={schoolIcon} text={intl.formatMessage({id: 'common.education'})}></IconHeader>
+					<CustomHeadedChild textPosition={TextPosition.Left} size={HeaderSize.H2} text={intl.formatMessage({id: 'common.education'})}>
+						<CustomImage src={schoolIcon} ></CustomImage>
+					</CustomHeadedChild>
 				</div>
 
 				<div>

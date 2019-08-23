@@ -1,4 +1,4 @@
-export enum LabeledChildPosition {
+export enum TextPosition {
 	Top = "Top",
 	Right = "Right",
 	Bottom = "Bottom",

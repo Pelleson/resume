@@ -1,7 +1,7 @@
 import { HeaderSize } from "./HeaderSize";
-import { LabeledChildPosition } from "./LabeledChildPosition";
+import { TextPosition } from "./TextPosition";
 
 export {
 	HeaderSize,
-	LabeledChildPosition
+	TextPosition
 }

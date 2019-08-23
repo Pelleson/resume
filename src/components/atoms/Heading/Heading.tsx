@@ -14,7 +14,7 @@ const CustomSpan = styled.span<IHeading>`
 	font-weight: bold;
 `;
 
-const Heading = ({children, size, className}: IHeading) => (
+const Heading = ({children, size = HeaderSize.H3, className}: IHeading) => (
 	<CustomSpan size={size} className={className}>
 		{children}
 	</CustomSpan>
