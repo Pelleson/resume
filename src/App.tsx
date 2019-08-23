@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Textarea, Label, Input, Heading, Image } from "./components/atoms";
-import { LabeledChild, ContactItem, HeadedChild } from "./components/molecules";
+import { LabeledChild, ContactItem, HeadedChild, EducationItem } from "./components/molecules";
 import { injectIntl, InjectedIntlProps } from 'react-intl';
 import { PersonStore } from "stores";
 import styled from 'styled-components';
 import { observer } from 'mobx-react';
-import { contacts, hobbies } from "./Collections";
+import { contacts, hobbies, educations } from "./Collections";
 import { HeaderSize, TextPosition } from './enums';
 const schoolIcon = require('./media/school.png');
 
@@ -70,9 +70,14 @@ class App extends React.Component<IApp & InjectedIntlProps> {
 				</div>
 
 				<div>
-					<CustomHeadedChild textPosition={TextPosition.Left} size={HeaderSize.H2} text={intl.formatMessage({id: 'common.education'})}>
+					<CustomHeadedChild textPosition={TextPosition.Left} size={HeaderSize.H2} text={intl.formatMessage({ id: 'common.education' })}>
 						<CustomImage src={schoolIcon} ></CustomImage>
 					</CustomHeadedChild>
+					<FlexRow>
+						{educations.map((item, index) =>
+							<EducationItem key={index} graduationYearMonth={item.graduationYearMonth} educationName={item.educationName} educationEstablishment={item.educationEstablishment} />
+						)}
+					</FlexRow>
 				</div>
 
 				<div>

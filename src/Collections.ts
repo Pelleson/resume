@@ -24,3 +24,7 @@ export const hobbies = [
 	{src: musicIcon, text:"Music"},
 	{src: foodIcon, text:"Food"}
 ];
+
+export const educations = [
+	{graduationYearMonth:"2017-05-25", educationName:"Certified Azure Solutions Architect Expert", educationEstablishment:"Firebrand"}
+]
