@@ -9,5 +9,6 @@ export default {
 	"common.contacts": "Kontaktinfo",
 	"common.education": "Utbildning",
 	"common.hobbies": "Hobbyer",
+	"common.languages": "Språk",
 
 };

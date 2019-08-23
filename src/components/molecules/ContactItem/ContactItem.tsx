@@ -14,8 +14,8 @@ const CustomDiv = styled.div`
 `;
 
 const ContactIcon = styled(Image)`
-	height: 40px;
-	width: 40px;
+	height: 45px;
+	width: 45px;
 	margin: 5px;
 `;
 

@@ -26,5 +26,11 @@ export const hobbies = [
 ];
 
 export const educations = [
-	{graduationYearMonth:"2017-05-25", educationName:"Certified Azure Solutions Architect Expert", educationEstablishment:"Firebrand"}
-]
+	{graduationYearMonth:"2017-04-11", educationName:"Microsoft MCSE cloud platform and infrastructure", educationEstablishment:"Firebrand"},
+	{graduationYearMonth:"2015-10-15", educationName:"Systemutvecklare med specialisering i agila metoder", educationEstablishment:"Lernia"}
+];
+
+export const languages = [
+	{language:"Swedish", proficiency: "Native" },
+	{language:"English", proficiency: "Excellent" }
+];

@@ -15,7 +15,7 @@ const FlexColumn = styled.div`
 `;
 
 const SeaGreenLabel = styled(Label)`
-	color: #34b3b7 !important;
+	color: #34b3b7;
 `;
 
 const EducationItem = ({ graduationYearMonth, educationName, educationEstablishment, intl }: IEducationItem & InjectedIntlProps ) => (
