@@ -4,8 +4,6 @@ import { LabeledChild, ContactItem, EducationItem, HeadedChild } from "../../../
 import { Input, Image } from "../../../src/components/atoms"
 import { TextPosition } from '../../../src/enums';
 const dancingIcon = require('../../../src/media/dancing.png');
-const hejIcon = require('../../../src/media/hej.png');
-
 const rootName = 'Atomic Design/Molecules';
 
 storiesOf(rootName, module)

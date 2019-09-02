@@ -10,5 +10,6 @@ export default {
 	"common.education": "Utbildning",
 	"common.hobbies": "Hobbyer",
 	"common.languages": "Språk",
+	"common.workExperience": "Arbetslivserfarenhet",
 
 };

@@ -12,20 +12,6 @@
 			"stories"
 		],
 		"baseUrl": ".",
-		"paths": {
-			"components/*": [
-				"src/components/*"
-			],
-			"stores": [
-				"src/stores/"
-			],
-			"models": [
-				"src/models/"
-			],
-			"interfaces": [
-				"src/interfaces/"
-			]
-		},
 		"jsx": "react",
 		"outDir": "dist",
 		"lib": [

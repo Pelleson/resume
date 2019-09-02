@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Label, Link, Textarea, Input, Image, Heading } from 'components/atoms';
+import { Label, Link, Textarea, Input, Image, Heading } from '../../../src/components/atoms';
 import { HeaderSize } from '../../../src/enums';
 const clothesIcon = require('../../../src/media/clothes.png');
 const dancingIcon = require('../../../src/media/dancing.png');

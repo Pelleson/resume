@@ -2,8 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import App from './App';
 import { IntlProvider, addLocaleData } from 'react-intl';
-import { PersonStore } from "stores";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 addLocaleData(require('react-intl/locale-data/sv'));
 addLocaleData(require('react-intl/locale-data/en'));
@@ -11,11 +10,10 @@ addLocaleData(require('react-intl/locale-data/en'));
 const locale: string = "sv-SE";
 const localePrefix = locale.split("-")[0];
 const messages = require(`./translations/${localePrefix}`).default;
-const store = new PersonStore();
 
 ReactDOM.render(
 	<IntlProvider messages={messages} locale={localePrefix}>
-		<App store={store}/>
+		<App />
 	</IntlProvider>,
 	document.getElementById('root')
 );

@@ -1,5 +1,5 @@
-import { Person } from 'models';
-import { ViewModel } from 'interfaces';
+import { Person } from '../models';
+import { ViewModel } from '../interfaces'
 import { action, observable} from 'mobx';
 import { createViewModel } from 'mobx-utils';
 

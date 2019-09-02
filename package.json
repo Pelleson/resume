@@ -15,7 +15,9 @@
 		"react-scripts-ts": "^3.1.0",
 		"styled-components": "^3.4.9",
 		"styled-theme": "^0.3.3",
-		"styled-tools": "^1.7.1"
+		"styled-tools": "^1.7.1",
+		"react-bootstrap": "^0.32.4",
+		"bootstrap": "^3.3.7"
 	},
 	"scripts": {
 		"start": "react-scripts-ts start",
@@ -24,6 +26,7 @@
 		"storybook": "start-storybook -p 6006"
 	},
 	"devDependencies": {
+		"@types/react-bootstrap": "^0.32.14",
 		"@storybook/react": "^3.4.11",
 		"@types/enzyme": "^3.10.3",
 		"@types/jest": "^23.3.3",

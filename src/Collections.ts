@@ -34,3 +34,8 @@ export const languages = [
 	{language:"Swedish", proficiency: "Native" },
 	{language:"English", proficiency: "Excellent" }
 ];
+
+export const workExperiences = [
+	{ jobTitle: "System-developer", company: "Läkarleasing AB", jobDescription: "bla bla bla"},
+	{ jobTitle: "Team Lead FrontEnd", company: "Tofindout AB", jobDescription: "bla bla bla"}
+]
