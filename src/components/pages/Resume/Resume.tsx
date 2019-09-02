@@ -12,8 +12,9 @@ const schoolIcon = require('../../../media/school.png');
 
 const FlexRow = styled.div`
 	display:flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	flex-flow: row wrap;
+	align-content: space-between;
+	justify-content: space-between;
 `;
 
 const CustomRow = styled(Row)`
@@ -52,7 +53,13 @@ const CustomHeadedChild = styled(HeadedChild)`
 const HobbieItem = styled(HeadedChild)`
 	color: #34b3b7;
 	align-items: center;
-	margin:  0.5em 1.5em 0.5em 1.5em;
+`;
+
+const CustomHr = styled.hr`
+	flex-basis: 100%;
+	height: 0;
+	margin: 0;
+	border: 0;
 `;
 
 class Resume extends React.Component<InjectedIntlProps> {
@@ -94,11 +101,19 @@ class Resume extends React.Component<InjectedIntlProps> {
 					<Col lg={6}>
 						<SeaGreenHeader size={HeaderSize.H2}>{intl.formatMessage({ id: "common.hobbies" })}</SeaGreenHeader>
 						<FlexRow>
-							{hobbies.map((item, index) =>
-								<HobbieItem key={index} text={item.text} textPosition={TextPosition.Bottom} size={HeaderSize.H4}>
-									<CustomImage src={item.src} bounce></CustomImage>
-								</HobbieItem>
-							)}
+							{hobbies.map((item, index) => {
+								return index === 5 ?
+									<React.Fragment>
+										<CustomHr />
+										<HobbieItem key={index} text={item.text} textPosition={TextPosition.Bottom} size={HeaderSize.H4}>
+											<CustomImage src={item.src} bounce></CustomImage>
+										</HobbieItem>
+									</React.Fragment>
+									:
+									<HobbieItem key={index} text={item.text} textPosition={TextPosition.Bottom} size={HeaderSize.H4}>
+										<CustomImage src={item.src} bounce></CustomImage>
+									</HobbieItem>
+							})}
 						</FlexRow>
 					</Col>
 					<Col lg={6}>

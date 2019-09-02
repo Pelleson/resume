@@ -13,6 +13,7 @@ const dancing = require('./media/dancing.png');
 const clothes = require('./media/clothes.png');
 const books = require('./media/books.png');
 const wineIcon = require('./media/wine.png');
+const meetupIcon = require('./media/meetup.png');
 
 export const contacts = [
 	{label: "LinkedIn", src:linkedinIcon, linkText:"LinkedIn", href:"https://se.linkedin.com/in/pelle-alstermo-b6083983"},
@@ -31,6 +32,7 @@ export const hobbies = [
 	{src: clothes, text:"Clothing"},
 	{src: books, text:"Reading"},
 	{src: wineIcon, text:"Wine"},
+	{src: meetupIcon, text:"Meetups"},
 
 ];
 
