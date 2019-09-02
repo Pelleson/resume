@@ -10,7 +10,6 @@ export interface IHeading{
 
 const CustomSpan = styled.span<IHeading>`
 	font-size: ${p => p.size && `${p.size}`};
-	margin: 0.1em;
 	font-weight: bold;
 `;
 

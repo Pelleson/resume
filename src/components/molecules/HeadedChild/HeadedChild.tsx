@@ -14,7 +14,7 @@ export interface IHeadedChild{
 const CustomDiv = styled.div<IHeadedChild>`
 	display: flex;
 	flex-direction: ${p => p.textPosition === TextPosition.Top || p.textPosition === TextPosition.Bottom ? 'column' : 'row'};
-	>span ${p => (p.textPosition === TextPosition.Bottom || p.textPosition === TextPosition.Right) && '{order:2;}'}
+	> span ${p => (p.textPosition === TextPosition.Bottom || p.textPosition === TextPosition.Right) && '{order:2;}'}
 `;
 
 const HeadedChild = ({children, text, textPosition = TextPosition.Top, size ,className}: IHeadedChild) => (

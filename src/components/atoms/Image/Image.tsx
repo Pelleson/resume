@@ -4,6 +4,7 @@ import styled, { keyframes } from 'styled-components';
 export interface IImage {
 	src: string;
 	alt?: string;
+	bounce?: boolean;
 	className?: string;
 };
 
@@ -19,19 +20,21 @@ const bounce = keyframes`
 	}
 `;
 
-const CustomImage = styled.img`
+const CustomImage = styled.img<IImage>`
 	height: 100px;
 	width: 100px;
+	${p => p.bounce && `
 	&:hover {
 		animation-name: ${bounce};
 		animation-duration: 2s;
 		animation-delay: 0s;
 		animation-iteration-count: 1;
 	}
+	`}
 `;
 
-const Image = ({ src, alt, className }: IImage) => (
-	<CustomImage src={src} alt={alt} className={className} />
+const Image = ({ src, alt, bounce = false, className }: IImage) => (
+	<CustomImage src={src} alt={alt} className={className} bounce={bounce}/>
 );
 
 export default Image;

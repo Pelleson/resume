@@ -13,6 +13,7 @@ const schoolIcon = require('../../../media/school.png');
 const FlexRow = styled.div`
 	display:flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 `;
 
 const CustomRow = styled(Row)`
@@ -46,6 +47,12 @@ const CustomImage = styled(Image)`
 const CustomHeadedChild = styled(HeadedChild)`
 	color: #34b3b7;
 	align-items: center;
+`;
+
+const HobbieItem = styled(HeadedChild)`
+	color: #34b3b7;
+	align-items: center;
+	margin:  0.5em 1.5em 0.5em 1.5em;
 `;
 
 class Resume extends React.Component<InjectedIntlProps> {
@@ -88,9 +95,9 @@ class Resume extends React.Component<InjectedIntlProps> {
 						<SeaGreenHeader size={HeaderSize.H2}>{intl.formatMessage({ id: "common.hobbies" })}</SeaGreenHeader>
 						<FlexRow>
 							{hobbies.map((item, index) =>
-								<CustomHeadedChild key={index} text={item.text} textPosition={TextPosition.Bottom} size={HeaderSize.H4}>
-									<CustomImage src={item.src}></CustomImage>
-								</CustomHeadedChild>
+								<HobbieItem key={index} text={item.text} textPosition={TextPosition.Bottom} size={HeaderSize.H4}>
+									<CustomImage src={item.src} bounce></CustomImage>
+								</HobbieItem>
 							)}
 						</FlexRow>
 					</Col>

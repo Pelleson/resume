@@ -30,7 +30,7 @@ const ColumnDiv = styled.div`
 
 const ContactItem = ({ src, label, linkText, href }: IContactItem) => (
 	<CustomDiv>
-		<ContactIcon src={src} />
+		<ContactIcon src={src} bounce/>
 		<ColumnDiv>
 			<Label label={label}></Label>
 			<ContactLink href={href}>{linkText}</ContactLink>

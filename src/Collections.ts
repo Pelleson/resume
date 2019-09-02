@@ -4,11 +4,15 @@ const githubIcon = require('./media/GitHub-Mark-64px.png');
 const emailIcon = require('./media/mail.png');
 const phoneIcon = require('./media/phone.png');
 
-const suitcaseIcon = require('./media/suitcase.png');
+const stocksIcon = require('./media/stocks.png');
 const musicIcon = require('./media/music.png');
 const moviesIcon = require('./media/movies.png');
 const codingIcon = require('./media/people.png');
 const foodIcon = require('./media/food.png');
+const dancing = require('./media/dancing.png');
+const clothes = require('./media/clothes.png');
+const books = require('./media/books.png');
+const wineIcon = require('./media/wine.png');
 
 export const contacts = [
 	{label: "LinkedIn", src:linkedinIcon, linkText:"LinkedIn", href:"https://se.linkedin.com/in/pelle-alstermo-b6083983"},
@@ -19,10 +23,15 @@ export const contacts = [
 
 export const hobbies = [
 	{src: codingIcon, text:"Coding"},
-	{src: suitcaseIcon, text:"Finance"},
+	{src: stocksIcon, text:"Finance"},
 	{src: moviesIcon, text:"Movies"},
 	{src: musicIcon, text:"Music"},
-	{src: foodIcon, text:"Food"}
+	{src: foodIcon, text:"Food"},
+	{src: dancing, text:"Dancing"},
+	{src: clothes, text:"Clothing"},
+	{src: books, text:"Reading"},
+	{src: wineIcon, text:"Wine"},
+
 ];
 
 export const educations = [
