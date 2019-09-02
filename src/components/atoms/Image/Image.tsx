@@ -25,7 +25,6 @@ const CustomImage = styled.img`
 	&:hover {
 		animation-name: ${bounce};
 		animation-duration: 2s;
-		animation-timing-function: ease;
 		animation-delay: 0s;
 		animation-iteration-count: 1;
 	}
