@@ -9,11 +9,11 @@ import { contacts, hobbies, educations, languages, workExperiences } from "../..
 
 const langIcon = require('../../../media/shapes.png');
 const schoolIcon = require('../../../media/school.png');
+const megaLangIcon = require('../../../media/megalang.png');
 
 const FlexRow = styled.div`
 	display:flex;
 	flex-flow: row wrap;
-	align-content: space-between;
 	justify-content: space-between;
 `;
 
@@ -43,6 +43,11 @@ const CustomImage = styled(Image)`
 	height: 45px;
 	width: 45px;
 	margin: 5px;
+`;
+
+const LangImage = styled(Image)`
+	height: 150px;
+	width: 150px;
 `;
 
 const CustomHeadedChild = styled(HeadedChild)`
@@ -127,6 +132,9 @@ class Resume extends React.Component<InjectedIntlProps> {
 									<Label label={item.proficiency} />
 								</React.Fragment>
 							)}
+
+							<LangImage src={megaLangIcon} bounce></LangImage>
+
 						</FlexColumn>
 					</Col>
 				</CustomRow>
