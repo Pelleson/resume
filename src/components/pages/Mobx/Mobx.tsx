@@ -1,27 +1,27 @@
 import * as React from 'react';
-import { observer } from 'mobx-react';
+import { inject, observer } from 'mobx-react';
 import { Textarea, Input } from "../../atoms";
 import { LabeledChild } from "../../molecules";
-import { PersonStore } from "../../../stores";
+import { RootStore } from "../../../stores/RootStore";
 
 export interface IMobx {
-	store: PersonStore;
+	rootStore: RootStore;
 };
 
-const Mobx = ({store}: IMobx) => (
+const Mobx = ({rootStore}: IMobx) => (
 	<div>
 		<Textarea
 			rounded
-			value={store.viewModel.fullname} />
+			value={rootStore.personStore.viewModel.fullname} />
 
-		<Input value={store.viewModel.firstname} onChange={e => store.onChange("firstname", e.target.value)} />
+		<Input value={rootStore.personStore.viewModel.firstname} onChange={e => rootStore.personStore.onChange("firstname", e.target.value)} />
 
-		<Input value={store.viewModel.lastname} onChange={e => store.onChange("lastname", e.target.value)} />
+		<Input value={rootStore.personStore.viewModel.lastname} onChange={e => rootStore.personStore.onChange("lastname", e.target.value)} />
 
 		<LabeledChild label="LabeledChild">
-			<Input value={store.viewModel.email} onChange={e => store.onChange("email", e.target.value)} />
+			<Input value={rootStore.personStore.viewModel.email} onChange={e => rootStore.personStore.onChange("email", e.target.value)} />
 		</LabeledChild>
 
 	</div>
 )
-export default observer(Mobx);
+export default inject("rootStore")(observer(Mobx));

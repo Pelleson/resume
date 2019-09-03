@@ -1,19 +1,16 @@
+import App from './App';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import App from './App';
-import { IntlProvider, addLocaleData } from 'react-intl';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
-addLocaleData(require('react-intl/locale-data/sv'));
-addLocaleData(require('react-intl/locale-data/en'));
+import { Provider } from "mobx-react";
+import { RootStore } from './stores/RootStore';
 
-const locale: string = "sv-SE";
-const localePrefix = locale.split("-")[0];
-const messages = require(`./translations/${localePrefix}`).default;
+import './index.css';
+import 'flag-icon-css/css/flag-icon.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
-	<IntlProvider messages={messages} locale={localePrefix}>
+	<Provider rootStore={new RootStore()}>
 		<App />
-	</IntlProvider>,
+	</Provider>,
 	document.getElementById('root')
 );

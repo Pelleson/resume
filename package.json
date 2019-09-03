@@ -5,19 +5,20 @@
 	"dependencies": {
 		"axios": "^0.18.0",
 		"babel-polyfill": "^6.26.0",
+		"bootstrap": "^3.3.7",
 		"chroma-js": "^1.4.0",
+		"flag-icon-css": "^3.3.0",
 		"mobx": "^4.3.1",
 		"mobx-react": "^5.2.5",
 		"mobx-utils": "^5.4.1",
 		"react": "^16.9.0",
+		"react-bootstrap": "^0.32.4",
 		"react-dom": "^16.9.0",
 		"react-intl": "^2.7.0",
 		"react-scripts-ts": "^3.1.0",
 		"styled-components": "^3.4.9",
 		"styled-theme": "^0.3.3",
-		"styled-tools": "^1.7.1",
-		"react-bootstrap": "^0.32.4",
-		"bootstrap": "^3.3.7"
+		"styled-tools": "^1.7.1"
 	},
 	"scripts": {
 		"start": "react-scripts-ts start",

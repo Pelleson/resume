@@ -1,14 +1,17 @@
 import { Person } from '../models';
-import { ViewModel } from '../interfaces'
+import { RootStore } from "./RootStore";
+import { ViewModel } from '../interfaces';
 import { action, observable} from 'mobx';
 import { createViewModel } from 'mobx-utils';
 
 export class PersonStore {
 
 	@observable public person: Person;
+	@observable public rootStore: RootStore;
 	@observable public viewModel: ViewModel<Person>;
 
-	constructor() {
+	constructor(rootStore: RootStore) {
+		this.rootStore = rootStore;
 		this.person = new Person();
 		this.viewModel = createViewModel(this.person);
 	};

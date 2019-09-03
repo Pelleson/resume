@@ -16,10 +16,10 @@ const wineIcon = require('./media/wine.png');
 const meetupIcon = require('./media/meetup.png');
 
 export const contacts = [
-	{label: "LinkedIn", src:linkedinIcon, linkText:"LinkedIn", href:"https://se.linkedin.com/in/pelle-alstermo-b6083983"},
-	{label: "GitHub", src:githubIcon, linkText:"GitHub", href:"https://github.com/Pelleson"},
-	{label: "Email", src:emailIcon, linkText:"Email me!", href:"mailto:pelle.alstermo@gmail.com"},
-	{label: "Phone", src:phoneIcon, linkText:"Call me!", href:"callto:+46723395200"}
+	{contactType: "LinkedIn", src:linkedinIcon, href:"https://se.linkedin.com/in/pelle-alstermo-b6083983"},
+	{contactType: "GitHub", src:githubIcon, href:"https://github.com/Pelleson"},
+	{contactType: "Email", src:emailIcon, href:"mailto:pelle.alstermo@gmail.com"},
+	{contactType: "Phone", src:phoneIcon, href:"callto:+46723395200"}
 ];
 
 export const hobbies = [
