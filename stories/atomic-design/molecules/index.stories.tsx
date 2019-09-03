@@ -14,7 +14,7 @@ storiesOf(rootName, module)
 	));
 
 storiesOf(rootName, module)
-	.add('EducationItem', () => (<EducationItem graduationYearMonth={"2019-08-14 08:27:41.517"} educationName="computer science" educationEstablishment="Harvard" />));
+	.add('EducationItem', () => (<EducationItem graduationYearMonth={"2019-08-14 08:27:41.517"} educationDesc="computer science" educationEstablishment="Harvard" />));
 
 storiesOf(rootName, module)
 	.add('LabeledChild', () => (

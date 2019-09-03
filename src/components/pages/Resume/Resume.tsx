@@ -11,15 +11,14 @@ const langIcon = require('../../../media/shapes.png');
 const schoolIcon = require('../../../media/school.png');
 const megaLangIcon = require('../../../media/megalang.png');
 
-const FlexRow = styled.div`
+const HobbieRow = styled.div`
 	display:flex;
 	flex-flow: row wrap;
-	justify-content: space-between;
+	margin-right: 10em;
 `;
 
 const CustomRow = styled(Row)`
-	margin-top: 3em;
-	margin-bottom: 3em;
+	margin-top: 5em;
 `;
 
 const FlexColumn = styled.div`
@@ -44,6 +43,8 @@ const CustomImage = styled(Image)`
 const LangImage = styled(Image)`
 	height: 150px;
 	width: 150px;
+	align-self: center;
+	position: absolute;
 `;
 
 const CustomHeadedChild = styled(HeadedChild)`
@@ -54,19 +55,7 @@ const CustomHeadedChild = styled(HeadedChild)`
 const HobbieItem = styled(HeadedChild)`
 	color: #34b3b7;
 	align-items: center;
-`;
-
-const HobbieMargin = styled(HeadedChild)`
-	color: #34b3b7;
-	align-items: center;
-	margin-right: 5em;
-`;
-
-const CustomHr = styled.hr`
-	flex-basis: 100%;
-	height: 0;
-	margin: 0;
-	border: 0;
+	margin-right: 1em;
 `;
 
 class Resume extends React.Component<InjectedIntlProps> {
@@ -82,11 +71,11 @@ class Resume extends React.Component<InjectedIntlProps> {
 						<React.Fragment>
 							{contacts.map((item, index) =>
 								<ContactItem
-								key={index}
-								label={intl.formatMessage({ id: `contact.${item.contactType}` })}
-								src={item.src}
-								linkText={intl.formatMessage({ id: `contact.linkText.${item.contactType}` })}
-								href={item.href} />
+									key={index}
+									label={intl.formatMessage({ id: `contact.${item.contactType}` })}
+									src={item.src}
+									linkText={intl.formatMessage({ id: `contact.linkText.${item.contactType}` })}
+									href={item.href} />
 							)}
 						</React.Fragment>
 					</Col>
@@ -97,7 +86,11 @@ class Resume extends React.Component<InjectedIntlProps> {
 						</CustomHeadedChild>
 						<FlexColumn>
 							{educations.map((item, index) =>
-								<EducationItem key={index} graduationYearMonth={item.graduationYearMonth} educationName={item.educationName} educationEstablishment={item.educationEstablishment} />
+								<EducationItem
+									key={index}
+									graduationYearMonth={item.graduationYearMonth}
+									educationDesc={item.educationDesc}
+									educationEstablishment={item.educationEstablishment} />
 							)}
 						</FlexColumn>
 					</Col>
@@ -106,21 +99,13 @@ class Resume extends React.Component<InjectedIntlProps> {
 				<CustomRow>
 					<Col lg={6}>
 						<SeaGreenHeader size={HeaderSize.H2}>{intl.formatMessage({ id: "common.hobbies" })}</SeaGreenHeader>
-						<FlexRow>
-							{hobbies.map((item, index) => {
-								return index === 4 || index === 9 ?
-									<React.Fragment>
-										<HobbieMargin key={index} text={item.text} textPosition={TextPosition.Bottom} size={HeaderSize.H4}>
-											<CustomImage src={item.src} bounce></CustomImage>
-										</HobbieMargin>
-										<CustomHr/>
-									</React.Fragment>
-									:
-									<HobbieItem key={index} text={item.text} textPosition={TextPosition.Bottom} size={HeaderSize.H4}>
-										<CustomImage src={item.src} bounce></CustomImage>
-									</HobbieItem>
-							})}
-						</FlexRow>
+						<HobbieRow>
+							{hobbies.map((item, index) =>
+								<HobbieItem key={index} text={intl.formatMessage({ id: `hobbies.${item.key}` })} textPosition={TextPosition.Bottom} size={HeaderSize.H4}>
+									<CustomImage src={item.src} bounce></CustomImage>
+								</HobbieItem>
+							)}
+						</HobbieRow>
 					</Col>
 					<Col lg={6}>
 						<CustomHeadedChild textPosition={TextPosition.Left} size={HeaderSize.H2} text={intl.formatMessage({ id: 'common.languages' })}>
@@ -129,35 +114,31 @@ class Resume extends React.Component<InjectedIntlProps> {
 						<FlexColumn>
 							{languages.map((item, index) =>
 								<React.Fragment key={index}>
-									<SeaGreenLabel label={item.language} />
-									<Label label={item.proficiency} />
+									<SeaGreenLabel label={intl.formatMessage({ id: `language.id.${item.languageId}` })} />
+									<Label label={intl.formatMessage({ id: `language.proficiencyLvl.${item.proficiencyLvl}` })} />
 								</React.Fragment>
 							)}
 
-							<LangImage src={megaLangIcon} bounce></LangImage>
+							<LangImage src={megaLangIcon}></LangImage>
 
 						</FlexColumn>
 					</Col>
 				</CustomRow>
 
-				<Row>
+				<CustomRow>
 					<Col lg={12}>
 						<SeaGreenHeader size={HeaderSize.H2}>{intl.formatMessage({ id: "common.workExperience" })}</SeaGreenHeader>
 					</Col>
-				</Row>
-				<Row>
-					<FlexRow>
-						{workExperiences.map((item, index) =>
-							<Col lg={6} key={index}>
-								<FlexColumn>
-									<Label label={item.jobTitle} />
-									<SeaGreenLabel label={item.company} />
-									<Paragraph>{item.jobDescription}</Paragraph>
-								</FlexColumn>
-							</Col>
-						)}
-					</FlexRow>
-				</Row>
+					{workExperiences.map((item, index) =>
+						<Col lg={6}>
+							<FlexColumn key={index}>
+								<Label label={intl.formatMessage({ id: `common.${item.profession}` })} />
+								<SeaGreenLabel label={item.company} />
+								<Paragraph>{intl.formatMessage({ id: `work.desc.${item.workDescriptionKey}` })}</Paragraph>
+							</FlexColumn>
+						</Col>
+					)}
+				</CustomRow>
 
 			</React.Fragment>
 		);

@@ -9,8 +9,6 @@ const musicIcon = require('./media/music.png');
 const moviesIcon = require('./media/movies.png');
 const codingIcon = require('./media/people.png');
 const foodIcon = require('./media/food.png');
-const dancing = require('./media/dancing.png');
-const clothes = require('./media/clothes.png');
 const books = require('./media/books.png');
 const wineIcon = require('./media/wine.png');
 const meetupIcon = require('./media/meetup.png');
@@ -23,30 +21,28 @@ export const contacts = [
 ];
 
 export const hobbies = [
-	{src: codingIcon, text:"Coding"},
-	{src: stocksIcon, text:"Finance"},
-	{src: moviesIcon, text:"Movies"},
-	{src: musicIcon, text:"Music"},
-	{src: foodIcon, text:"Food"},
-	{src: dancing, text:"Dancing"},
-	{src: clothes, text:"Clothing"},
-	{src: books, text:"Reading"},
-	{src: wineIcon, text:"Wine"},
-	{src: meetupIcon, text:"Meetups"},
+	{src: stocksIcon, key:"Economy"},
+	{src: moviesIcon, key:"Movies"},
+	{src: musicIcon, key:"Music"},
+	{src: foodIcon, key:"Food"},
+	{src: books, key:"Reading"},
+	{src: wineIcon, key:"Wine"},
+	{src: meetupIcon, key:"Meetups"},
+	{src: codingIcon, key:"Coding"},
 
 ];
 
 export const educations = [
-	{graduationYearMonth:"2017-04-11", educationName:"Microsoft MCSE cloud platform and infrastructure", educationEstablishment:"Firebrand"},
-	{graduationYearMonth:"2015-10-15", educationName:"Systemutvecklare med specialisering i agila metoder", educationEstablishment:"Lernia"}
+	{graduationYearMonth:"2017-04-11", educationDesc:"MCSE", educationEstablishment:"Firebrand"},
+	{graduationYearMonth:"2015-10-15", educationDesc:"Lernia", educationEstablishment:"Lernia"}
 ];
 
 export const languages = [
-	{language:"Swedish", proficiency: "Native" },
-	{language:"English", proficiency: "Excellent" }
+	{languageId:1, proficiencyLvl: 5 },
+	{languageId:2, proficiencyLvl: 4 }
 ];
 
 export const workExperiences = [
-	{ jobTitle: "System-developer", company: "Läkarleasing AB", jobDescription: "bla bla bla"},
-	{ jobTitle: "Team Lead FrontEnd", company: "Tofindout AB", jobDescription: "bla bla bla"}
+	{ profession: "teamlead-frontend", company: "Tofindout AB", workDescriptionKey: "TFOAB"},
+	{ profession: "system-developer", company: "Läkarleasing AB", workDescriptionKey: "LLAB"}
 ]

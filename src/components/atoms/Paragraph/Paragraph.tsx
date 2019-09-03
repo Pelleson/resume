@@ -7,6 +7,9 @@ export interface IParagraph {
 };
 
 const CustomParagraph = styled.p`
+	font-size: 1.6rem;
+	letter-spacing: 0.001rem;
+	line-height: 2.8rem;
 	margin: 0;
 `;
 

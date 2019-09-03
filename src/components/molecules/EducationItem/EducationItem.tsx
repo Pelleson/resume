@@ -5,7 +5,7 @@ import { injectIntl, InjectedIntlProps } from 'react-intl';
 
 export interface IEducationItem {
 	graduationYearMonth: string;
-	educationName: string;
+	educationDesc: string;
 	educationEstablishment: string;
 };
 
@@ -18,10 +18,10 @@ const SeaGreenLabel = styled(Label)`
 	color: #34b3b7;
 `;
 
-const EducationItem = ({ graduationYearMonth, educationName, educationEstablishment, intl }: IEducationItem & InjectedIntlProps ) => (
+const EducationItem = ({ graduationYearMonth, educationDesc, educationEstablishment, intl }: IEducationItem & InjectedIntlProps ) => (
 	<FlexColumn>
-		<Label label={intl.formatDate(graduationYearMonth, { month: "long", year: 'numeric' })}></Label>
-		<SeaGreenLabel label={educationName}></SeaGreenLabel>
+		<Label label={intl.formatDate(graduationYearMonth, { month: "long", year: 'numeric' })}/>
+		<SeaGreenLabel label={intl.formatMessage({id:`education.${educationDesc}`})} />
 		<Label label={educationEstablishment}></Label>
 	</FlexColumn>
 );
