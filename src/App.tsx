@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Resume } from "./components/pages";
 import { inject, observer } from 'mobx-react';
 import { RootStore } from "./stores/RootStore";
-import { Header } from "./components/organisms";
+import { Header, Footer } from "./components/organisms";
 import { IntlProvider, addLocaleData } from 'react-intl';
 import { Grid } from 'react-bootstrap';
 
@@ -18,6 +18,7 @@ const App = ({ rootStore }: IApp) => (
 		<Grid>
 			<Header />
 			<Resume />
+			<Footer />
 		</Grid>
 	</IntlProvider>
 )

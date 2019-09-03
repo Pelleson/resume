@@ -10,6 +10,8 @@ import { contacts, hobbies, educations, languages, workExperiences } from "../..
 const langIcon = require('../../../media/shapes.png');
 const schoolIcon = require('../../../media/school.png');
 const megaLangIcon = require('../../../media/megalang.png');
+const laptopIcon = require('../../../media/laptop.png');
+const progressIcon = require('../../../media/progress.png');
 
 const HobbieRow = styled.div`
 	display:flex;
@@ -50,6 +52,20 @@ const LangImage = styled(Image)`
 const CustomHeadedChild = styled(HeadedChild)`
 	color: #34b3b7;
 	align-items: center;
+`;
+
+const BigHeadedChild = styled(HeadedChild)`
+	align-items: center;
+`;
+
+const BigImage = styled(Image)`
+	height: 150px;
+	width: 150px;
+`;
+
+const LongImage = styled(Image)`
+	height: 150px;
+	width: 400px;
 `;
 
 const HobbieItem = styled(HeadedChild)`
@@ -138,6 +154,18 @@ class Resume extends React.Component<InjectedIntlProps> {
 							</FlexColumn>
 						</Col>
 					)}
+				</CustomRow>
+
+				<CustomRow>
+					<Col lg={6}>
+						<BigHeadedChild textPosition={TextPosition.Right} size={HeaderSize.H1} text={intl.formatMessage({ id: 'common.professionalskills' })}>
+							<BigImage src={laptopIcon} ></BigImage>
+						</BigHeadedChild>
+					</Col>
+					<Col lg={6}>
+							<LongImage src={progressIcon} ></LongImage>
+					</Col>
+
 				</CustomRow>
 
 			</React.Fragment>

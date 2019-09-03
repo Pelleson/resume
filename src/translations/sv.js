@@ -14,7 +14,8 @@ export default {
 	"common.workExperience": "Arbetslivserfarenhet",
 	"common.system-developer": "Systemutvecklare",
 	"common.teamlead-frontend": "Team Lead FrontEnd",
-	
+	"common.professionalskills": "Yrkeskunnande",
+
 	"contact.LinkedIn": "LinkedIn",
 	"contact.GitHub": "GitHub",
 	"contact.Email": "E-post",

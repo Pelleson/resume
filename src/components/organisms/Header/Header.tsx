@@ -12,6 +12,7 @@ interface IHeader {
 
 const CustomHeader = styled.header`
 	display:flex;
+	margin-top: 2em;
 	> * {
 		margin: 0.1em;
 	}
@@ -32,7 +33,7 @@ const Header = ({ rootStore, intl }: IHeader & InjectedIntlProps) => (
 	<CustomHeader>
 		<HeaderBlackish size={HeaderSize.H1}>{intl.formatMessage({ id: "common.myName" })}</HeaderBlackish>
 		<SeaGreenHeader size={HeaderSize.H1}>{intl.formatMessage({ id: "common.webDeveloper" })}</SeaGreenHeader>
-		<span className={`flag-icon flag-icon-${rootStore.locale === 'en' ? 'gb' : 'se'}`} onClick={() => rootStore.changeLang(rootStore.locale === 'sv' ? 'en' : 'sv')}></span>
+		<span className={`flag-icon flag-icon-${rootStore.locale === 'en' ? 'se' : 'gb'}`} onClick={() => rootStore.changeLang(rootStore.locale === 'sv' ? 'en' : 'sv')}></span>
 	</CustomHeader>
 );
 

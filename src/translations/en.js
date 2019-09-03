@@ -13,6 +13,7 @@ export default {
 	"common.footer": "Copyright © 2019 Pelle Alstermo. All rights reserved.",
 	"common.system-developer": "System-developer",
 	"common.teamlead-frontend": "Team Lead FrontEnd",
+	"common.professionalskills": "Professional Skills",
 
 	"contact.LinkedIn": "LinkedIn",
 	"contact.GitHub": "GitHub",
