@@ -12,7 +12,7 @@ variables:
   azureSubscription: '2f910d5a-4c8b-4b42-95f0-3a29c45223f1'
 
   # Web app name
-  webAppName: 'pellealstermo'
+  webAppName: 'pelleson'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -54,7 +54,7 @@ stages:
         deploy:
           steps:            
           - task: AzureRmWebAppDeployment@4
-            displayName: 'Azure App Service Deploy: pellealstermo'
+            displayName: 'Azure App Service Deploy: pelleson'
             inputs:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
