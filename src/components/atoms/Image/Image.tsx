@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 export interface IImage {
 	src: string;
@@ -23,12 +23,9 @@ const bounce = keyframes`
 const CustomImage = styled.img<IImage>`
 	height: 100px;
 	width: 100px;
-	${p => p.bounce && `
+	${p => p.bounce && css`
 	&:hover {
-		animation-name: ${bounce};
-		animation-duration: 2s;
-		animation-delay: 0s;
-		animation-iteration-count: 1;
+		animation: ${bounce} 2s ease-out 1;
 	}
 	`}
 `;

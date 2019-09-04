@@ -15,6 +15,7 @@ export default {
 	"common.system-developer": "Systemutvecklare",
 	"common.teamlead-frontend": "Team Lead FrontEnd",
 	"common.professionalskills": "Yrkeskunnande",
+	"common.theme": "Tema",
 
 	"contact.LinkedIn": "LinkedIn",
 	"contact.GitHub": "GitHub",

@@ -146,8 +146,8 @@ class Resume extends React.Component<InjectedIntlProps> {
 						<SeaGreenHeader size={HeaderSize.H2}>{intl.formatMessage({ id: "common.workExperience" })}</SeaGreenHeader>
 					</Col>
 					{workExperiences.map((item, index) =>
-						<Col lg={6}>
-							<FlexColumn key={index}>
+						<Col lg={6} key={index}>
+							<FlexColumn>
 								<Label label={intl.formatMessage({ id: `common.${item.profession}` })} />
 								<SeaGreenLabel label={item.company} />
 								<Paragraph>{intl.formatMessage({ id: `work.desc.${item.workDescriptionKey}` })}</Paragraph>

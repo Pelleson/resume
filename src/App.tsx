@@ -5,8 +5,7 @@ import { RootStore } from "./stores/RootStore";
 import { Header, Footer } from "./components/organisms";
 import { IntlProvider, addLocaleData } from 'react-intl';
 import { Grid } from 'react-bootstrap';
-import { ThemeProvider } from 'styled-components';
-import { BasicTheme } from "./themes/BasicTheme";
+import styled, { ThemeProvider } from 'styled-components';
 
 addLocaleData(require('react-intl/locale-data/sv'));
 addLocaleData(require('react-intl/locale-data/en'));
@@ -15,14 +14,26 @@ interface IApp {
 	rootStore?: RootStore
 }
 
+const Wrapper = styled.div`
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: ${props => props.theme.background}
+	z-index: 10;
+`;
+
 const App = ({ rootStore }: IApp) => (
 	<IntlProvider key={rootStore.locale} messages={rootStore.messages} locale={rootStore.locale}>
-		<ThemeProvider theme={BasicTheme}>
-			<Grid>
-				<Header />
-				<Resume />
-				<Footer />
-			</Grid>
+		<ThemeProvider theme={rootStore.selectedTheme}>
+			<Wrapper>
+				<Grid>
+					<Header />
+					<Resume />
+					<Footer />
+				</Grid>
+			</Wrapper>
 		</ThemeProvider>
 	</IntlProvider>
 )

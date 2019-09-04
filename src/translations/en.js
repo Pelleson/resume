@@ -14,6 +14,7 @@ export default {
 	"common.system-developer": "System-developer",
 	"common.teamlead-frontend": "Team Lead FrontEnd",
 	"common.professionalskills": "Professional Skills",
+	"common.theme": "Tema",
 
 	"contact.LinkedIn": "LinkedIn",
 	"contact.GitHub": "GitHub",
