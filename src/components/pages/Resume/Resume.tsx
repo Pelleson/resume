@@ -29,11 +29,11 @@ const FlexColumn = styled.div`
 `;
 
 const SeaGreenHeader = styled(Heading)`
-	color: #34b3b7;
+	color: ${props => props.theme.seaGreen}
 `;
 
 const SeaGreenLabel = styled(Label)`
-	color: #34b3b7;
+	color: ${props => props.theme.seaGreen}
 `;
 
 const CustomImage = styled(Image)`
@@ -50,7 +50,7 @@ const LangImage = styled(Image)`
 `;
 
 const CustomHeadedChild = styled(HeadedChild)`
-	color: #34b3b7;
+	color: ${props => props.theme.seaGreen}
 	align-items: center;
 `;
 
@@ -69,7 +69,7 @@ const LongImage = styled(Image)`
 `;
 
 const HobbieItem = styled(HeadedChild)`
-	color: #34b3b7;
+	color: ${props => props.theme.seaGreen}
 	align-items: center;
 	margin-right: 1em;
 `;
