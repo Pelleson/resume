@@ -16,7 +16,7 @@ export class RootStore {
 	}
 
 	@action public onChangeTheme(theme: string) {
-		//todo investigate why ux not update
+		//todo cleanup code
 		switch (theme) {
 			case "LightTheme":
 				this.selectedTheme = LightTheme;

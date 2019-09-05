@@ -36,7 +36,7 @@ const Header = ({ rootStore, intl }: IHeader & InjectedIntlProps) => (
 		<HeaderBlackish size={HeaderSize.H1}>{intl.formatMessage({ id: "common.myName" })}</HeaderBlackish>
 		<SeaGreenHeader size={HeaderSize.H1}>{intl.formatMessage({ id: "common.webDeveloper" })}</SeaGreenHeader>
 		<div>
-			<select value={rootStore.selectedTheme} onChange={e => rootStore.onChangeTheme(e.target.value)}>
+			<select value={rootStore.selectedTheme.name} onChange={e => rootStore.onChangeTheme(e.target.value)}>
 				{Themes.map((item, i) =>
 					<option key={i} value={item}>{item}</option>
 				)}
