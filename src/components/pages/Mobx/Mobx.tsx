@@ -12,7 +12,8 @@ const Mobx = ({rootStore}: IMobx) => (
 	<div>
 		<Textarea
 			rounded
-			value={rootStore.personStore.viewModel.fullname} />
+			value={rootStore.personStore.viewModel.fullname}
+			onChange={() => {}} />
 
 		<Input value={rootStore.personStore.viewModel.firstname} onChange={e => rootStore.personStore.onChange("firstname", e.target.value)} />
 

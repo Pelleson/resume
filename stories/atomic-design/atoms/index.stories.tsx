@@ -27,7 +27,12 @@ storiesOf(rootName, module)
 	.add('Link', () => <Link>Link</Link>)
 
 storiesOf(rootName, module)
-	.add('Textarea', () => <Textarea></Textarea>)
+	.add('Textarea', () => (
+		<div>
+			<Textarea value="textarea" onChange={() => { }}></Textarea>
+			<Textarea value="textarea rounded" onChange={() => { }} rounded></Textarea>
+		</div>
+	))
 
 storiesOf(rootName, module)
 	.add('Input', () => <Input value="Input" onChange={e => console.log(e.target.value)}></Input>)

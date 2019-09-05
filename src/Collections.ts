@@ -46,3 +46,9 @@ export const workExperiences = [
 	{ profession: "teamlead-frontend", company: "Tofindout AB", workDescriptionKey: "TFOAB"},
 	{ profession: "system-developer", company: "Läkarleasing AB", workDescriptionKey: "LLAB"}
 ]
+
+export const Themes = [
+	"LightTheme",
+	"DarkTheme",
+	"NightTheme"
+];

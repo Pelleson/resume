@@ -2,22 +2,32 @@ import { observable, action } from "mobx";
 import { PersonStore } from "./PersonStore";
 import sv from '../translations/sv';
 import en from '../translations/en';
-import { BasicTheme, DarkTheme } from "../themes/Themes";
+import { LightTheme, DarkTheme, NightTheme } from "../themes/Themes";
 
 export class RootStore {
 
 	@observable public locale: string = 'en';
 	@observable public messages: any = en;
 	@observable public personStore: PersonStore;
-	@observable public selectedTheme: any = BasicTheme;
+	@observable public selectedTheme: any = LightTheme;
 
 	constructor() {
 		this.personStore = new PersonStore(this);
 	}
 
-	@action public onChangeTheme() {
-		//TODO: Make more generic;
-		JSON.stringify(this.selectedTheme) === JSON.stringify(BasicTheme) ? this.selectedTheme = DarkTheme : this.selectedTheme = BasicTheme;
+	@action public onChangeTheme(theme: string) {
+		//todo investigate why ux not update
+		switch (theme) {
+			case "LightTheme":
+				this.selectedTheme = LightTheme;
+				break;
+			case "DarkTheme":
+				this.selectedTheme = DarkTheme;
+				break;
+			case "NightTheme":
+				this.selectedTheme = NightTheme;
+				break;
+		}
 	};
 
 	@action public changeLang(lang: string) {

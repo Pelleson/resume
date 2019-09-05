@@ -3,9 +3,9 @@ import { Heading } from "../../atoms";
 import styled from 'styled-components';
 import { HeaderSize } from '../../../enums';
 import { inject, observer } from "mobx-react";
+import { Themes } from "../../../Collections";
 import { RootStore } from '../../../stores/RootStore';
 import { injectIntl, InjectedIntlProps } from 'react-intl';
-import { Button } from 'react-bootstrap';
 
 interface IHeader {
 	rootStore?: RootStore;
@@ -36,7 +36,11 @@ const Header = ({ rootStore, intl }: IHeader & InjectedIntlProps) => (
 		<HeaderBlackish size={HeaderSize.H1}>{intl.formatMessage({ id: "common.myName" })}</HeaderBlackish>
 		<SeaGreenHeader size={HeaderSize.H1}>{intl.formatMessage({ id: "common.webDeveloper" })}</SeaGreenHeader>
 		<div>
-			<Button onClick={() => rootStore.onChangeTheme()}>{intl.formatMessage({ id: "common.theme" })}</Button>
+			<select value={rootStore.selectedTheme} onChange={e => rootStore.onChangeTheme(e.target.value)}>
+				{Themes.map((item, i) =>
+					<option key={i} value={item}>{item}</option>
+				)}
+			</select>
 			<span className={`flag-icon flag-icon-${rootStore.locale === 'en' ? 'se' : 'gb'}`} onClick={() => rootStore.changeLang(rootStore.locale === 'sv' ? 'en' : 'sv')}></span>
 		</div>
 	</CustomHeader>
