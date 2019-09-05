@@ -11,7 +11,7 @@ const langIcon = require('../../../media/shapes.png');
 const schoolIcon = require('../../../media/school.png');
 const megaLangIcon = require('../../../media/megalang.png');
 const laptopIcon = require('../../../media/laptop.png');
-const progressIcon = require('../../../media/progress.png');
+const progressIcon = require('../../../media/react.png');
 
 const HobbieRow = styled.div`
 	display:flex;
@@ -45,7 +45,7 @@ const CustomImage = styled(Image)`
 const LangImage = styled(Image)`
 	height: 150px;
 	width: 150px;
-	align-self: center;
+	align-self: flex-end;
 	position: absolute;
 `;
 
@@ -65,7 +65,7 @@ const BigImage = styled(Image)`
 
 const LongImage = styled(Image)`
 	height: 150px;
-	width: 400px;
+	width: 150px;
 `;
 
 const HobbieItem = styled(HeadedChild)`

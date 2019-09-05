@@ -1,13 +1,13 @@
 
 const linkedinIcon = require('./media/linkedin.png');
-const githubIcon = require('./media/GitHub-Mark-64px.png');
-const emailIcon = require('./media/mail.png');
+const githubIcon = require('./media/Octocat.png');
+const emailIcon = require('./media/email.png');
 const phoneIcon = require('./media/phone.png');
 
 const stocksIcon = require('./media/stocks.png');
 const musicIcon = require('./media/music.png');
 const moviesIcon = require('./media/movies.png');
-const codingIcon = require('./media/people.png');
+const codingIcon = require('./media/coding.png');
 const foodIcon = require('./media/food.png');
 const books = require('./media/books.png');
 const wineIcon = require('./media/wine.png');
