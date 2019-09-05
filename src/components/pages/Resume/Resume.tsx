@@ -11,7 +11,9 @@ const langIcon = require('../../../media/shapes.png');
 const schoolIcon = require('../../../media/school.png');
 const megaLangIcon = require('../../../media/megalang.png');
 const laptopIcon = require('../../../media/laptop.png');
-const progressIcon = require('../../../media/react.png');
+const reactIcon = require('../../../media/react.png');
+const csharpIcon = require('../../../media/c_sharp.png');
+const dbIcon = require('../../../media/database.png');
 
 const HobbieRow = styled.div`
 	display:flex;
@@ -59,11 +61,6 @@ const BigHeadedChild = styled(HeadedChild)`
 `;
 
 const BigImage = styled(Image)`
-	height: 150px;
-	width: 150px;
-`;
-
-const LongImage = styled(Image)`
 	height: 150px;
 	width: 150px;
 `;
@@ -163,7 +160,9 @@ class Resume extends React.Component<InjectedIntlProps> {
 						</BigHeadedChild>
 					</Col>
 					<Col lg={6}>
-							<LongImage src={progressIcon} ></LongImage>
+							<BigImage src={reactIcon} ></BigImage>
+							<BigImage src={csharpIcon} ></BigImage>
+							<BigImage src={dbIcon} ></BigImage>
 					</Col>
 
 				</CustomRow>
