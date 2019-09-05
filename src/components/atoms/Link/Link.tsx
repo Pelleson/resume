@@ -15,7 +15,7 @@ const CustomLink = styled.a<ILink>`
 		text-decoration: underline;
 	}
 	font-size: 1.2em;
-	color: black;
+	color: ${props => props.theme.primaryColor};
 	font-weight: ${p => p.bold ? 'bold' : 'normal'};
 `;
 

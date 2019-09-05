@@ -23,18 +23,14 @@ const CustomHeader = styled.header`
 	}
 `;
 
-const HeaderBlackish = styled(Heading)`
-	color:#373a3c;
-`;
-
-const SeaGreenHeader = styled(Heading)`
-	color: #34b3b7;
+const SecondaryColoredHeading = styled(Heading)`
+	color: ${props => props.theme.secondaryColor}
 `;
 
 const Header = ({ rootStore, intl }: IHeader & InjectedIntlProps) => (
 	<CustomHeader>
-		<HeaderBlackish size={HeaderSize.H1}>{intl.formatMessage({ id: "common.myName" })}</HeaderBlackish>
-		<SeaGreenHeader size={HeaderSize.H1}>{intl.formatMessage({ id: "common.webDeveloper" })}</SeaGreenHeader>
+		<Heading size={HeaderSize.H1}>{intl.formatMessage({ id: "common.myName" })}</Heading>
+		<SecondaryColoredHeading size={HeaderSize.H1}>{intl.formatMessage({ id: "common.webDeveloper" })}</SecondaryColoredHeading>
 		<div>
 			<select value={rootStore.selectedTheme.name} onChange={e => rootStore.onChangeTheme(e.target.value)}>
 				{Themes.map((item, i) =>

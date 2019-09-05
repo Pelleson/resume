@@ -11,6 +11,7 @@ export interface ILabel {
 
 const CustomLabel = styled.span`
 	font-size: 1.2em;
+	color: ${props => props.theme.primaryColor};
 `;
 
 const DangerText = styled(CustomLabel)`
@@ -18,7 +19,7 @@ const DangerText = styled(CustomLabel)`
 `;
 
 const Indicator = styled(CustomLabel)`
-	color: black;
+	color: ${props => props.theme.primaryColor};
 `;
 
 const PrimaryText = styled(CustomLabel)`
@@ -61,7 +62,7 @@ const Popup = styled.div`
 
 const Label = ({ label, tooltip, className, intl, required = false }: ILabel & InjectedIntlProps) => (
 	<div className={className}>
-		<CustomLabel>{label}</CustomLabel>
+		<CustomLabel className={className}>{label}</CustomLabel>
 		{required && <DangerText>*</DangerText>}
 		{
 			(tooltip || required) &&

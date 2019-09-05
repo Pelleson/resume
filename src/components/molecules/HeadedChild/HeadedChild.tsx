@@ -17,9 +17,13 @@ const CustomDiv = styled.div<IHeadedChild>`
 	> span ${p => (p.textPosition === TextPosition.Bottom || p.textPosition === TextPosition.Right) && '{order:2;}'}
 `;
 
+const SecondaryColoredHeading = styled(Heading)`
+	color: ${props => props.theme.secondaryColor}
+`;
+
 const HeadedChild = ({children, text, textPosition = TextPosition.Top, size ,className}: IHeadedChild) => (
 	<CustomDiv className={className} textPosition={textPosition}>
-		<Heading size={size}>{text}</Heading>
+		<SecondaryColoredHeading size={size}>{text}</SecondaryColoredHeading>
 		{children}
 	</CustomDiv>
 );

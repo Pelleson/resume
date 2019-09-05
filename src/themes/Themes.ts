@@ -1,18 +1,21 @@
 
 export const LightTheme = {
 	name: "LightTheme",
-	seaGreen: '#34b3b7;',
-	background: '#c5c5c5;'
+	primaryColor: '#000000;',
+	secondaryColor: '#4285F4;',
+	background: '#ffffff;'
 }
 
 export const DarkTheme = {
 	name: "DarkTheme",
-	seaGreen: '#34b3b7;',
+	primaryColor: '#f3f3f1;',
+	secondaryColor: '#48c865;',
 	background: '#143143;'
 }
 
 export const NightTheme = {
 	name: "NightTheme",
-	seaGreen: '#34b3b7;',
+	primaryColor: '#f3f3f1;',
+	secondaryColor: '#34b3b7;',
 	background: '#000000;'
 }

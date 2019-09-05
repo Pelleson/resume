@@ -19,8 +19,8 @@ const ContactIcon = styled(Image)`
 	margin: 5px;
 `;
 
-const ContactLink = styled(Link)`
-	color: #34b3b7;
+const SecondaryColoredLink = styled(Link)`
+	color: ${props => props.theme.secondaryColor}
 `;
 
 const ColumnDiv = styled.div`
@@ -33,7 +33,7 @@ const ContactItem = ({ src, label, linkText, href }: IContactItem) => (
 		<ContactIcon src={src} bounce/>
 		<ColumnDiv>
 			<Label label={label}></Label>
-			<ContactLink href={href}>{linkText}</ContactLink>
+			<SecondaryColoredLink href={href}>{linkText}</SecondaryColoredLink>
 		</ColumnDiv>
 	</CustomDiv>
 );

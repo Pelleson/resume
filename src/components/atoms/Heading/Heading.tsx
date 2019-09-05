@@ -11,6 +11,7 @@ export interface IHeading{
 const CustomSpan = styled.span<IHeading>`
 	font-size: ${p => p.size && `${p.size}`};
 	font-weight: bold;
+	color: ${props => props.theme.primaryColor};
 `;
 
 const Heading = ({children, size = HeaderSize.H3, className}: IHeading) => (

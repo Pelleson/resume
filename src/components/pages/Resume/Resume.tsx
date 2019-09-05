@@ -28,12 +28,12 @@ const FlexColumn = styled.div`
 	flex-direction: column;
 `;
 
-const SeaGreenHeader = styled(Heading)`
-	color: ${props => props.theme.seaGreen}
+const SecondaryColoredHeading = styled(Heading)`
+	color: ${props => props.theme.secondaryColor}
 `;
 
-const SeaGreenLabel = styled(Label)`
-	color: ${props => props.theme.seaGreen}
+const SecondaryColoredLabel = styled(Label)`
+	color: ${props => props.theme.secondaryColor}
 `;
 
 const CustomImage = styled(Image)`
@@ -50,7 +50,7 @@ const LangImage = styled(Image)`
 `;
 
 const CustomHeadedChild = styled(HeadedChild)`
-	color: ${props => props.theme.seaGreen}
+	color: ${props => props.theme.secondaryColor}
 	align-items: center;
 `;
 
@@ -69,7 +69,7 @@ const LongImage = styled(Image)`
 `;
 
 const HobbieItem = styled(HeadedChild)`
-	color: ${props => props.theme.seaGreen}
+	color: ${props => props.theme.secondaryColor}
 	align-items: center;
 	margin-right: 1em;
 `;
@@ -83,7 +83,7 @@ class Resume extends React.Component<InjectedIntlProps> {
 
 				<CustomRow>
 					<Col lg={6}>
-						<SeaGreenHeader size={HeaderSize.H2}>{intl.formatMessage({ id: "common.contacts" })}</SeaGreenHeader>
+						<SecondaryColoredHeading size={HeaderSize.H2}>{intl.formatMessage({ id: "common.contacts" })}</SecondaryColoredHeading>
 						<React.Fragment>
 							{contacts.map((item, index) =>
 								<ContactItem
@@ -114,7 +114,7 @@ class Resume extends React.Component<InjectedIntlProps> {
 
 				<CustomRow>
 					<Col lg={6}>
-						<SeaGreenHeader size={HeaderSize.H2}>{intl.formatMessage({ id: "common.hobbies" })}</SeaGreenHeader>
+						<SecondaryColoredHeading size={HeaderSize.H2}>{intl.formatMessage({ id: "common.hobbies" })}</SecondaryColoredHeading>
 						<HobbieRow>
 							{hobbies.map((item, index) =>
 								<HobbieItem key={index} text={intl.formatMessage({ id: `hobbies.${item.key}` })} textPosition={TextPosition.Bottom} size={HeaderSize.H4}>
@@ -130,7 +130,7 @@ class Resume extends React.Component<InjectedIntlProps> {
 						<FlexColumn>
 							{languages.map((item, index) =>
 								<React.Fragment key={index}>
-									<SeaGreenLabel label={intl.formatMessage({ id: `language.id.${item.languageId}` })} />
+									<SecondaryColoredLabel label={intl.formatMessage({ id: `language.id.${item.languageId}` })} />
 									<Label label={intl.formatMessage({ id: `language.proficiencyLvl.${item.proficiencyLvl}` })} />
 								</React.Fragment>
 							)}
@@ -143,13 +143,13 @@ class Resume extends React.Component<InjectedIntlProps> {
 
 				<CustomRow>
 					<Col lg={12}>
-						<SeaGreenHeader size={HeaderSize.H2}>{intl.formatMessage({ id: "common.workExperience" })}</SeaGreenHeader>
+						<SecondaryColoredHeading size={HeaderSize.H2}>{intl.formatMessage({ id: "common.workExperience" })}</SecondaryColoredHeading>
 					</Col>
 					{workExperiences.map((item, index) =>
 						<Col lg={6} key={index}>
 							<FlexColumn>
 								<Label label={intl.formatMessage({ id: `common.${item.profession}` })} />
-								<SeaGreenLabel label={item.company} />
+								<SecondaryColoredLabel label={item.company} />
 								<Paragraph>{intl.formatMessage({ id: `work.desc.${item.workDescriptionKey}` })}</Paragraph>
 							</FlexColumn>
 						</Col>

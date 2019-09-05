@@ -11,6 +11,7 @@ const CustomParagraph = styled.p`
 	letter-spacing: 0.001rem;
 	line-height: 2.8rem;
 	margin: 0;
+	color: ${props => props.theme.primaryColor}
 `;
 
 const Paragraph = ({ children, className }: IParagraph) => (

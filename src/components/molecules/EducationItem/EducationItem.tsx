@@ -14,14 +14,14 @@ const FlexColumn = styled.div`
 	flex-direction: column;
 `;
 
-const SeaGreenLabel = styled(Label)`
-	color: #34b3b7;
+const SecondaryColoredLabel = styled(Label)`
+	color: ${props => props.theme.secondaryColor};
 `;
 
 const EducationItem = ({ graduationYearMonth, educationDesc, educationEstablishment, intl }: IEducationItem & InjectedIntlProps ) => (
 	<FlexColumn>
 		<Label label={intl.formatDate(graduationYearMonth, { month: "long", year: 'numeric' })}/>
-		<SeaGreenLabel label={intl.formatMessage({id:`education.${educationDesc}`})} />
+		<SecondaryColoredLabel label={intl.formatMessage({id:`education.${educationDesc}`})} />
 		<Label label={educationEstablishment}></Label>
 	</FlexColumn>
 );
