@@ -18,7 +18,7 @@ const CustomHeader = styled.header`
 		margin: 0.1em;
 	}
 	*:last-child {
-		> button {margin-right: 0.3em;}
+		> select {margin-right: 0.3em;}
 		margin-left: auto;
 	}
 `;

@@ -9,7 +9,7 @@ export class RootStore {
 	@observable public locale: string = 'en';
 	@observable public messages: any = en;
 	@observable public personStore: PersonStore;
-	@observable public selectedTheme: any = LightTheme;
+	@observable public selectedTheme: any = DarkTheme;
 
 	constructor() {
 		this.personStore = new PersonStore(this);

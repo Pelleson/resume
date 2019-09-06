@@ -63,6 +63,7 @@ const BigHeadedChild = styled(HeadedChild)`
 const BigImage = styled(Image)`
 	height: 150px;
 	width: 150px;
+	margin: 1em;
 `;
 
 const HobbieItem = styled(HeadedChild)`
