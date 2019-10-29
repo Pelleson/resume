@@ -76,7 +76,7 @@
 		"tslint-react": "^3.2.0",
 		"uglifyjs-webpack-plugin": "1.2.5",
 		"webpack": "^3.10.0",
-		"webpack-dev-server": "^2.11.3",
+		"webpack-dev-server": "^3.1.11",
 		"webpack-manifest-plugin": "1.3.2",
 		"html-webpack-plugin": "2.29.0",
 		"sw-precache-webpack-plugin": "0.11.4",
